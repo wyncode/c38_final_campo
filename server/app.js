@@ -5,8 +5,7 @@ const express = require('express'),
   passport = require('./middleware/authentication/'),
   cookieParser = require('cookie-parser'),
   userRoutes = require('./routes/secure/users'),
-  openRoutes = require('./routes/open'),
-  fileUpload = require('express-fileupload');
+  openRoutes = require('./routes/open');
 
 // Parse incoming JSON into objects
 // This gives us access to the req.body object
@@ -24,12 +23,8 @@ app.use(
 );
 
 // This middleware gives us access to the req.files object
-app.use(
-  fileUpload({
-    useTempFiles: true,
-    tempFileDir: '/tmp/images'
-  })
-);
+//
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 app.use(userRoutes);
 
