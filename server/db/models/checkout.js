@@ -1,24 +1,44 @@
 const mongoose = require('mongoose');
 
-const CheckoutSchema = new mongoose.Schema({
-  userId: {
-    userId: true,
-    required: true
+const checkoutSchema = new mongoose.Schema(
+  {
+    userId: {
+      userId: true,
+      required: true
+    },
+    parkId: {
+      required: true
+    },
+    partySize: {
+      required: true
+    },
+    creditCardNumber: {
+      type: Integer,
+      required: true
+    },
+    expirationDate: {
+      type: Date,
+      required: true
+    },
+
+    cvvNumber: {
+      type: Integer,
+      required: true
+    },
+    address: {
+      type: String,
+      required: true
+    },
+
+    confirmationNumber: {
+      type: String,
+      unique: true
+    }
   },
-  parkId: {
-    required: true
-  },
-  partySize: {
-    required: true
-  },
-  creditCardNumber: {
-    required: true
-  },
-  address: {
-    type: String,
-    required: true
+  {
+    timestamps: true
   }
-});
+);
 
 const Checkout = mongoose.model('Checkout', checkoutSchema);
 module.exports = 'Checkout';
