@@ -1,27 +1,36 @@
 require('./db/config');
+
 const express = require('express'),
-  path = require('path'),
-  openRoutes = require('./routes/open');
+  app = express(),
+  passport = require('./middleware/authentication/'),
+  cookieParser = require('cookie-parser'),
+  userRoutes = require('./routes/secure/users'),
+  openRoutes = require('./routes/open'),
+  fileUpload = require('express-fileupload');
 
-const app = express();
-
-//Middleware
+// Parse incoming JSON into objects
+// This gives us access to the req.body object
 app.use(express.json());
-
-// Unauthenticated routes
 app.use(openRoutes);
 
-// Serve any static files
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-}
+// This middleware gives us access to the request.cookies object
+app.use(cookieParser());
 
-// Any authentication middleware and related routing would be here.
+// Authenticate user loged in
+app.use(
+  passport.authenticate('jwt', {
+    session: false
+  })
+);
 
-// Handle React routing, return all requests to React app
-if (process.env.NODE_ENV === 'production') {
-  app.get('*', (request, response) => {
-    response.sendFile(path.join(__dirname, '../client/build', 'index.html'));
-  });
-}
+// This middleware gives us access to the req.files object
+app.use(
+  fileUpload({
+    useTempFiles: true,
+    tempFileDir: '/tmp/images'
+  })
+);
+
+app.use(userRoutes);
+
 module.exports = app;

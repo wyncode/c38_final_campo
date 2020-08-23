@@ -7,6 +7,11 @@
 - `yarn install`
 - `cd client && yarn install`
 - `cp .env.sample .env`
+- `cd ..`
+
+- `yarn add validator jsonwebtoken bcrypt`
+- `yarn add passport passport-jwt cookie-parser`
+- `yarn add cloudinary express-fileupload`
 
 ## Available build commands
 
@@ -23,5 +28,3 @@ NOTE: Heroku specifically runs `npm start`, so don't remove that from your packa
 - `heroku create your-app-name`
 - `heroku config:set MONGODB_URL=<insertYourAtlasDbUri>`
 - `git push heroku master`
-
-
