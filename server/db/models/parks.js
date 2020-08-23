@@ -11,10 +11,10 @@ const parkChoice = new mongoose.Schema({
     type: String
   },
   campSiteAvail: {
-    type: String
+    type: Number
   },
   maxPartySize: {
-    type: String
+    type: Number
   }
 });
 const ParkChoice = mongoose.model('ParkChoice', parkChoiceSchema);

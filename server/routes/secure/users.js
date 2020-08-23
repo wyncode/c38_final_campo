@@ -1,4 +1,3 @@
-// CURRENT USER - GET
 const router = require('express').Router(),
   cloudinary = require('cloudinary').v2,
   isAdmin = require('../../middleware/authorization/index');

@@ -13,6 +13,10 @@
 - `yarn add passport passport-jwt cookie-parser`
 - `yarn add cloudinary express-fileupload`
 
+# Stripe
+
+- `yarn add stripe uuid`
+
 ## Available build commands
 
 - `yarn dev`: Runs BOTH your Express.JS and React developer environment locally at the same time. Any logs coming from Express will be prefaced with `[0]`, any logs from `create-react-app` will be prefaced with `[1]`.
