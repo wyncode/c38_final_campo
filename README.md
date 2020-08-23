@@ -7,15 +7,7 @@
 - `yarn install`
 - `cd client && yarn install`
 - `cp .env.sample .env`
-- `cd ..`
-
-- `yarn add validator jsonwebtoken bcrypt`
-- `yarn add passport passport-jwt cookie-parser`
-- `yarn add cloudinary express-fileupload`
-
-# Stripe
-
-- `yarn add stripe uuid`
+-
 
 ## Available build commands
 
