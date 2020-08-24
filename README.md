@@ -7,6 +7,7 @@
 - `yarn install`
 - `cd client && yarn install`
 - `cp .env.sample .env`
+-
 
 ## Available build commands
 
@@ -23,5 +24,3 @@ NOTE: Heroku specifically runs `npm start`, so don't remove that from your packa
 - `heroku create your-app-name`
 - `heroku config:set MONGODB_URL=<insertYourAtlasDbUri>`
 - `git push heroku master`
-
-
