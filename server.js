@@ -1,8 +1,5 @@
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
-const app = require('./server/app');
-const port = process.env.PORT || 8000;
-
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname, '../client/build')));
   app.get('*', (request, response) => {
