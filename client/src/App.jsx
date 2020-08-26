@@ -17,16 +17,14 @@ const App = () => {
   useEffect(fetchDemoData, []);
 
   return (
-    <div> 
-      <React.Fragment>
-        <Map />
-      </React.Fragment>
+     
+    
 
     
     <React.Fragment>
       <Accommodations />
     </React.Fragment>
-    </div>
+   
   );
 };
 

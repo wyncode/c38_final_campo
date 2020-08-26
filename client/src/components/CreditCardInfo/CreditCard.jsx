@@ -8,37 +8,11 @@ import {
 } from "@stripe/react-stripe-js";
 
 
-import "./ResponsiveFont";
-
-const useOptions = () => {
-  const fontSize = useResponsiveFontSize();
-  const options = useMemo(
-    () => ({
-      style: {
-        base: {
-          fontSize,
-          color: "#424770",
-          letterSpacing: "0.025em",
-          fontFamily: "Source Code Pro, monospace",
-          "::placeholder": {
-            color: "#aab7c4"
-          }
-        },
-        invalid: {
-          color: "#9e2146"
-        }
-      }
-    }),
-    [fontSize]
-  );
-
-  return options;
-};
 
 const CreditCardForm = () => {
   const stripe = useStripe();
   const elements = useElements();
-  const options = useOptions();
+  // const options = useOptions();
 
   const handleSubmit = async event => {
     event.preventDefault();
@@ -59,7 +33,7 @@ const CreditCardForm = () => {
       <label>
         Card number
         <CardNumberElement
-          options={options}
+          // options={options}
           onReady={() => {
             console.log("CardNumberElement [ready]");
           }}
@@ -77,7 +51,7 @@ const CreditCardForm = () => {
       <label>
         Expiration date
         <CardExpiryElement
-          options={options}
+          // options={options}
           onReady={() => {
             console.log("CardNumberElement [ready]");
           }}
@@ -95,7 +69,7 @@ const CreditCardForm = () => {
       <label>
         CVC
         <CardCvcElement
-          options={options}
+          // options={options}
           onReady={() => {
             console.log("CardNumberElement [ready]");
           }}
