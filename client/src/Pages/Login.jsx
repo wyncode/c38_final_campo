@@ -5,7 +5,7 @@ import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
 
-const SignUp = ({ history }) => {
+const Login = ({ history }) => {
   const [formData, setFormData] = useState(null);
   const { setCurrentUser } = useContext(AppContext);
 
@@ -16,29 +16,19 @@ const SignUp = ({ history }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post('/api/users/', formData)
+      .post('/api/users/login', formData)
       .then((response) => {
         sessionStorage.setItem('user', response.data);
         setCurrentUser(response.data);
         history.push('/');
       })
-      .catch((error) => swal('Error', 'Please check the inputs', 'warning'));
+      .catch(() => swal('Oops!', 'something went wrong', 'warning'));
   };
 
   return (
     <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-      <h1 className="mb-4">Campo</h1>
+      <h1 className="mb-4">Campo Member Login</h1>
       <Form style={{ width: 300 }} onSubmit={handleSubmit}>
-        <Form.Group>
-          <Form.Label htmlFor="fullName">Full Name</Form.Label>
-          <Form.Control
-            id="fullName"
-            type="text"
-            placeholder="Full Name"
-            name="name"
-            onChange={handleChange}
-          />
-        </Form.Group>
         <Form.Group>
           <Form.Label htmlFor="email">Email Address</Form.Label>
           <Form.Control
@@ -60,14 +50,17 @@ const SignUp = ({ history }) => {
           />
         </Form.Group>
         <Form.Group className="d-flex justify-content-center">
-          <Button type="submit">Create Account</Button>
+          <Button type="submit">Login</Button>
         </Form.Group>
       </Form>
-      <Link className="mt-4" to="/login">
-        Already have an account? Login.
+      <Link className="mt-2" to="/reset-password">
+        Forgot Password?
+      </Link>
+      <Link className="mt-2" to="/signup">
+        Need an Account? Sign up.
       </Link>
     </Container>
   );
 };
 
-export default SignUp;
+export default Login;

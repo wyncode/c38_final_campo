@@ -7,6 +7,7 @@ import SigninPage from './Pages/SigninPage';
 import HomePage from './Pages/HomePage';
 import SignupPage from './Pages/SignupPage';
 import ResetPasswordPage from './Pages/ResetPasswordPage';
+import Stripe from './Pages/StripePay';
 
 import './App.css';
 
