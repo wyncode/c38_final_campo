@@ -8,7 +8,7 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 const app = require('./server/app'),
-  port = process.env.PORT || 8080;
+  port = process.env.PORT || 8000;
 
 app.listen(port, () => {
   console.log(`Express server is up on port ${port}`);
