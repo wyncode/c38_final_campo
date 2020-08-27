@@ -1,53 +1,73 @@
-import React from 'react';
-import {
-    GoogleMap, 
-    useLoadScript,
-    Marker,
-    InfoWindow,
-} from '@react-google-maps/api';
 
-import mapStyles from './mapStyles'
+import React, { useState, useEffect } from "react";
+import ReactMapGL, { Marker, Popup } from "react-map-gl";
 
 
-//fill the div
-const mapContainerStyle = {
-    width: '100vw',
-    height: '100vh',
-}
 
+const Map = () => {
 
-// center lat and lng for Main USA
-const center = {
-    lat: 39.8283,
-    lng: 98.5795,
-}
-
-const options = {
-    styles: mapStyles,
-    disableDefaultUI: true,
-    zoomControl: true,
-}
-
-export default function Map() {
-    const { isLoaded, loadError} = useLoadScript({
-        googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY
-        
+    const [viewport, setViewport] = useState({
+        latitude: 39.8283,
+        longitude: -98.5795,
+        width: "100vw",
+        height: "100vh",
+        zoom: 4
     })
 
-    if(loadError) return "Error loading maps"
-    if(!isLoaded) return "Loading Maps"
+    const [selectedPark, setSelectedPark] = useState(null)
 
+    const park = "National Park"
+
+    useEffect(() => {
+        const listener = e => {
+          if (e.key === "Escape") {
+            setSelectedPark(null);
+          }
+        };
+        window.addEventListener("keydown", listener);
+    
+        return () => {
+          window.removeEventListener("keydown", listener);
+        };
+      }, []);
     return (
-    <div>
-        <GoogleMap mapContainerStyle={mapContainerStyle}
-         zoom={5} 
-         center={center}
-         options={options}
-        >
-            <Marker>
+        <div>
+            <ReactMapGL {...viewport}
+            mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+            onViewportChange={viewport => {
+                setViewport(viewport)
+            }}
+            >
+                <Marker 
+                key={1}
+                latitude={35.611763}
+                longitude={-83.489548}
+                >
+                    <button className="marker-btn" onClick={(e) => {
+                        e.preventDefault(
+                            setSelectedPark()
+                        )
+                    }}>
+                        
+                    </button>
+                </Marker>
+                {selectedPark ? (
+          <Popup
+            latitude={selectedPark.geometry.coordinates[1]}
+            longitude={selectedPark.geometry.coordinates[0]}
+            onClose={() => {
+              setSelectedPark(null);
+            }}
+          >
+            <div>
+              <h2>NationalPark</h2>
+              <p> Smokey Mountains</p>
+            </div>
+          </Popup>
+        ) : null}
                 
-            </Marker>
-        </GoogleMap>
-    </div>
+            </ReactMapGL>
+        </div>
     )
 }
+export default Map
