@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 
-const Navigation = () => {
+const NavigationBar = () => {
   return (
     <Navbar bg="secondary" expand="lg">
       <Nav.Item>
@@ -23,4 +23,4 @@ const Navigation = () => {
   );
 };
 
-export default Navigation;
+export default NavigationBar;
