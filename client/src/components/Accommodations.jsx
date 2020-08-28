@@ -45,8 +45,8 @@ function Accommodations() {
             <div>97% - 145 Reviews </div>
             <div className="stars">⭐️⭐️⭐️⭐️⭐️</div>
           </Row>
-          <Row>Amenities</Row>
-          <Row>Reviews</Row>
+          <Row><p>Amenities</p></Row>
+          <Row><p>Reviews</p></Row>
         </Col>
         <Col>
           <h3>$100</h3>
@@ -54,6 +54,7 @@ function Accommodations() {
           <Button variant="link">Check in</Button>
           <Button variant="link">Check out</Button>
           <Button variant="link">Guests</Button>
+          <Button><strong> Book Now </strong> </Button>
         </Col>
       </Row>
     </Container>
