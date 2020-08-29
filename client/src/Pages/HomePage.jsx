@@ -6,13 +6,13 @@ import NavigationBar from '../components/NavigationBar';
 const Home = () => {
   return (
     <div>
+      <NavigationBar />
       <Container className="d-flex flex-column justify-content align-items-center mt-5 bg-white">
         <h1>Wherever the campfire takes you.</h1>
         <h6>
           Discover America’s National Parks to unplug and enjoy a night under
           the stars.
         </h6>
-        <NavigationBar />
         <SearchBars />
         <p></p>
         <p></p>
