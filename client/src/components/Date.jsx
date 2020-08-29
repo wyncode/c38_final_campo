@@ -6,24 +6,12 @@ const Date = () => {
     <div id="date">
       <div id="dateleft">
         <Form>
-          <FormControl
-            id="searchbar"
-            type="date"
-            placeholder="Search..."
-            // onChange={(e) => setSearchTerm(e.target.value)}
-            // onChange={changeSearch}
-          />
+          <FormControl id="searchbar" type="date" placeholder="Search..." />
         </Form>
       </div>
       <div id="dateright">
         <Form>
-          <FormControl
-            id="searchbar"
-            type="date"
-            placeholder="Search..."
-            // onChange={(e) => setSearchTerm(e.target.value)}
-            // onChange={changeSearch}
-          />
+          <FormControl id="searchbar" type="date" placeholder="Search..." />
         </Form>
       </div>
     </div>
