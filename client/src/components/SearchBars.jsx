@@ -11,26 +11,6 @@ const SearchBars = () => {
             placeholder="Search by state, city, or park"
           />
         </Form>
-
-        <Form>
-          <FormControl
-            id="searchbar"
-            type="date"
-            placeholder="Search..."
-            // onChange={(e) => setSearchTerm(e.target.value)}
-            // onChange={changeSearch}
-          />
-        </Form>
-        <Form>
-          <FormControl
-            id="searchbar"
-            type="date"
-            placeholder="Search..."
-
-            // onChange={(e) => setSearchTerm(e.target.value)}
-            // onChange={changeSearch}
-          />
-        </Form>
       </Container>
     </div>
   );
