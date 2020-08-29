@@ -12,6 +12,7 @@ import SignupPage from './Pages/SignupPage';
 import ResetPasswordPage from './Pages/ResetPasswordPage';
 import Stripe from './Pages/StripePay'
 
+import styled from 'styled-components';
 import './App.css';
 
 const App = () => {

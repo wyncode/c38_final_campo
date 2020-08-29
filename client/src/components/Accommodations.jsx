@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { Carousel, Button, Container, Row, Col } from 'react-bootstrap';
+import styled, {css} from 'styled-components';
+import '../App.css';
 
 function Accommodations() {
   return (
-    <Container>
+    <Container className="body">
       <Row className="accommodations-header">
         <Carousel className="carousel-slide">
           <Carousel.Item>
@@ -29,6 +31,8 @@ function Accommodations() {
           </Carousel.Item>
         </Carousel>
       </Row>
+
+      
       <Row>
         <Col>
           <Row>
@@ -45,20 +49,16 @@ function Accommodations() {
             <div>97% - 145 Reviews </div>
             <div className="stars">⭐️⭐️⭐️⭐️⭐️</div>
           </Row>
-          <Row><p>Amenities</p></Row>
-          <Row><p>Reviews</p></Row>
         </Col>
+
         <Col>
-          <h3>$100</h3>
-          <p>per night</p>
-          <Button variant="link">Check in</Button>
-          <Button variant="link">Check out</Button>
-          <Button variant="link">Guests</Button>
-          <Button><strong> Book Now </strong> </Button>
+          <h3>$76/night</h3>  
+    <button class="btn btn-lg btn-block btn-dark btn-flashy" data-submit-booking="" type="button"> Book Now </button>
         </Col>
       </Row>
     </Container>
   );
 }
+
 
 export default Accommodations;
