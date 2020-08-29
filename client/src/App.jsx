@@ -7,7 +7,8 @@ import SigninPage from './Pages/SigninPage';
 import HomePage from './Pages/HomePage';
 import SignupPage from './Pages/SignupPage';
 import ResetPasswordPage from './Pages/ResetPasswordPage';
-import Stripe from './Pages/StripePay';
+import StripeCheckout from './components/StripeCheckout';
+import Quiz from './components/Quiz';
 
 import './App.css';
 
@@ -30,6 +31,8 @@ const App = () => {
         <Route exact path="/signup" component={SignupPage} />
         <Route exact path="/reset-password" component={ResetPasswordPage} />
         <Route exact path="/accomodations" component={Accommodations} />
+        <Route exact path="/checkout" component={StripeCheckout} />
+        <Route exact path="/quiz" component={Quiz} />
       </Switch>
     </Router>
     // <AppContextProvider>
