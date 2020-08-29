@@ -17,7 +17,6 @@ const Home = () => {
   return (
     <div>
       <NavigationBar />
-      {/* <Map /> */}
       <Container className="d-flex flex-column justify-content align-items-center mt-5 bg-white">
         <h1>Wherever the campfire takes you.</h1>
         <h6>
