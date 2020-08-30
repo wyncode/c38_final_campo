@@ -10,7 +10,6 @@ const Date = () => {
           <FormControl id="fromdate" type="date" />
         </FormGroup>
       </div>
-
       <div id="dateright">
         <FormGroup>
           <FormLabel htmlFor="todate">To: </FormLabel>
