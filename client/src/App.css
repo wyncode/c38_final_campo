@@ -1,17 +1,46 @@
-.body{
+body {
+  background: #EEEAE5;
+}
+
+.detail-container{
   padding:30px;
   margin:30px;
-  background:#E5E5E5;
+  /* background:#EEEAE5; */
 
 }
-
-.carousel-slide {
-  margin: auto;
-
-}
-
 .accommodations-header {
   padding-top: 8%;
-  padding-bottom: 8%;
+  padding-bottom: 5%;
+}
+.carousel-slide {
+  margin: auto;
+}
+.carousel-item img {
+  width: 100%;
+}
+.detail-title ul{
+  display: block;
+}
+.detail-title-bar {
+  border-bottom: 1px solid gray;
+  opacity: 0.35;
+}
+.detail-review p{
+  font-size: 12px;
+}
+.detail-review span{
+  opacity: 0.60;
+  margin-right: .5rem;
 }
 
+.detail-booking{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.book-button-monkey.btn{
+  margin-top: 20px;
+  background-color: black;
+
+  border-color: black;
+}

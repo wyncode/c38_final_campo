@@ -2,15 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { AppContextProvider } from './context/AppContext';
 import ContextDemo from './components/ContextDemo';
 import Accommodations from './components/Accommodations';
-
-import Map from './components/Map/Map'
-
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SigninPage from './Pages/SigninPage';
 import HomePage from './Pages/HomePage';
 import SignupPage from './Pages/SignupPage';
 import ResetPasswordPage from './Pages/ResetPasswordPage';
-import Stripe from './Pages/StripePay'
+import Stripe from './Pages/StripePay';
 
 import styled from 'styled-components';
 import './App.css';
@@ -27,7 +24,6 @@ const App = () => {
   useEffect(fetchDemoData, []);
 
   return (
-
     <Router>
       <Switch>
         <Route exact path="/" component={HomePage} />
@@ -44,7 +40,6 @@ const App = () => {
     //     <h3>{serverMessage}</h3>
     //   </div>
     // </AppContextProvider>
-
   );
 };
 
