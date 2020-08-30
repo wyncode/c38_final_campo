@@ -15,27 +15,29 @@ import Stripe from './Pages/StripePay'
 import './App.css';
 
 const App = () => {
-  const [serverMessage, setServerMessage] = useState('');
+  // const [serverMessage, setServerMessage] = useState('');
 
-  const fetchDemoData = () => {
-    fetch('/api/demo')
-      .then((response) => response.json())
-      .then((data) => setServerMessage(data.message));
-  };
+  // const fetchDemoData = () => {
+  //   fetch('/api/demo')
+  //     .then((response) => response.json())
+  //     .then((data) => setServerMessage(data.message));
+  // };
 
-  useEffect(fetchDemoData, []);
+  // useEffect(fetchDemoData, []);
 
   return (
-
-    <Router>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/signin" component={SigninPage} />
-        <Route exact path="/signup" component={SignupPage} />
-        <Route exact path="/reset-password" component={ResetPasswordPage} />
-        <Route exact path="/accomodations" component={Accommodations} />
-      </Switch>
-    </Router>
+<div>
+  <Map />
+</div>
+    // <Router>
+    //   <Switch>
+    //     <Route exact path="/" component={HomePage} />
+    //     <Route exact path="/signin" component={SigninPage} />
+    //     <Route exact path="/signup" component={SignupPage} />
+    //     <Route exact path="/reset-password" component={ResetPasswordPage} />
+    //     <Route exact path="/accomodations" component={Accommodations} />
+    //   </Switch>
+    // </Router>
     // <AppContextProvider>
     //   <div id="demo">
     //     <h3>Hello from client/src/App.js</h3>
