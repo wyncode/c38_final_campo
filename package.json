@@ -18,8 +18,11 @@
     "node-geocoder": "^3.27.0",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
+    "react-map-gl": "^5.2.7",
     "react-router-dom": "^5.2.0",
-    "stripe": "^8.89.0",
+    "react-stripe-checkout": "^2.6.3",
+    "stripe": "^8.90.0",
+    "sweetalert": "^2.1.2",
     "uuid": "^8.3.0",
     "validator": "^13.1.1"
   },
