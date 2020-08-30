@@ -2,15 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { AppContextProvider } from './context/AppContext';
 import ContextDemo from './components/ContextDemo';
 import Accommodations from './components/Accommodations';
-
-import Map from './components/Map/Map'
-
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SigninPage from './Pages/SigninPage';
 import HomePage from './Pages/HomePage';
 import SignupPage from './Pages/SignupPage';
 import ResetPasswordPage from './Pages/ResetPasswordPage';
-import Stripe from './Pages/StripePay'
+import StripeCheckout from './components/StripeCheckout';
+import Quiz from './components/Quiz';
+import ExplorePage from './Pages/ExplorePage';
 
 import './App.css';
 
@@ -26,6 +25,7 @@ const App = () => {
   // useEffect(fetchDemoData, []);
 
   return (
+<<<<<<< HEAD
 <div>
   <Map />
 </div>
@@ -46,6 +46,22 @@ const App = () => {
     //   </div>
     // </AppContextProvider>
 
+=======
+    <AppContextProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/signin" component={SigninPage} />
+          <Route exact path="/signup" component={SignupPage} />
+          <Route exact path="/reset-password" component={ResetPasswordPage} />
+          <Route exact path="/accomodations" component={Accommodations} />
+          <Route exact path="/checkout" component={StripeCheckout} />
+          <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/explore" component={ExplorePage} />
+        </Switch>
+      </Router>
+    </AppContextProvider>
+>>>>>>> master
   );
 };
 

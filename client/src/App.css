@@ -26,3 +26,15 @@
   left: 133px;
   top: 673px;
 }
+
+#dateleft {
+  margin-right: 3rem;
+}
+
+#date {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
