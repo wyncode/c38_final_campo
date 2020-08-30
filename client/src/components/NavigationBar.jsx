@@ -2,10 +2,6 @@ import React, { useContext } from 'react';
 import { Navbar, Nav, Dropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import './Navigation.css';
-<<<<<<< HEAD
-=======
-
->>>>>>> sunday
 
 const NavigationBar = () => {
   return (
@@ -18,19 +14,11 @@ const NavigationBar = () => {
         <Dropdown drop="down">
           <Dropdown.Toggle variant="outline-light">&#9776;</Dropdown.Toggle>
           <Dropdown.Menu>
-<<<<<<< HEAD
-            <Dropdown.Header>Welcome!</Dropdown.Header>
-            <Dropdown.Item></Dropdown.Item>
-            <Dropdown.Item>Login</Dropdown.Item>
+            <Dropdown.ItemText>Welcome!</Dropdown.ItemText>
+            <Dropdown.Divider />
             <Dropdown.Item as={Link} to="explore">
               Explore
             </Dropdown.Item>
-            <Dropdown.Divider />
-=======
-            <Dropdown.ItemText>Welcome!</Dropdown.ItemText>
-            <Dropdown.Divider />
-            <Dropdown.Item as={Link} to="explore">Explore</Dropdown.Item>
->>>>>>> sunday
             <Dropdown.Item>Quiz</Dropdown.Item>
             <Dropdown.Item>Articles</Dropdown.Item>
             <Dropdown.Item>Reviews</Dropdown.Item>
