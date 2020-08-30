@@ -34,7 +34,7 @@ const NavigationBar = () => {
           </Dropdown.Menu>
         </Dropdown>
       </Nav.Item>
-      <Nav.Item as={Link} to="./">
+      <Nav.Item as={Link} to="/">
         <img src="https://iili.io/dPN5ej.png" height="50" width="160"></img>
       </Nav.Item>
 
