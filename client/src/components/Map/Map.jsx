@@ -11,12 +11,13 @@ const Map = () => {
         longitude: -98.5795,
         width: "100vw",
         height: "100vh",
-        zoom: 4
+        zoom: 4,
+        
     })
 
     const [selectedPark, setSelectedPark] = useState(null)
 
-    const park = "National Park"
+
 
     useEffect(() => {
         const listener = e => {
@@ -48,6 +49,7 @@ const Map = () => {
                             setSelectedPark()
                         )
                     }}>
+                      
                         
                     </button>
                 </Marker>

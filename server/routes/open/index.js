@@ -69,9 +69,9 @@ router.get('/api/password', async (req, res) => {
   }
 });
 
-// ******************************
+
 // Redirect to password reset page
-// ******************************
+
 router.get('/api/password/:token', (req, res) => {
   const { token } = req.params;
   try {
