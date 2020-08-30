@@ -6,12 +6,12 @@ const Date = () => {
     <div id="date">
       <div id="dateleft">
         <Form>
-          <FormControl id="searchbar" type="date" placeholder="Search..." />
+          <FormControl id="searchbar" type="date" />
         </Form>
       </div>
       <div id="dateright">
         <Form>
-          <FormControl id="searchbar" type="date" placeholder="Search..." />
+          <FormControl id="searchbar" type="date" />
         </Form>
       </div>
     </div>

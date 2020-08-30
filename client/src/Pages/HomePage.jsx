@@ -10,7 +10,6 @@ import {
 import SearchBars from '../components/SearchBars';
 import NavigationBar from '../components/NavigationBar';
 import { Link } from 'react-router-dom';
-import Map from '../components/Map/Map';
 import Date from '../components/Date';
 
 const Home = () => {

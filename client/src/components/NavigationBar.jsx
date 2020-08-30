@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { Navbar, Nav, Dropdown } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 
 const NavigationBar = () => {
   return (
@@ -11,7 +12,9 @@ const NavigationBar = () => {
             <Dropdown.Header>Welcome!</Dropdown.Header>
             <Dropdown.Item></Dropdown.Item>
             <Dropdown.Item>Login</Dropdown.Item>
-            <Dropdown.Item>Explore</Dropdown.Item>
+            <Dropdown.Item as={Link} to="explore">
+              Explore
+            </Dropdown.Item>
             <Dropdown.Item>Articles</Dropdown.Item>
             <Dropdown.Item>Reviews</Dropdown.Item>
             <Dropdown.Item>Gear</Dropdown.Item>

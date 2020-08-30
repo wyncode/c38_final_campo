@@ -1,10 +1,11 @@
 import React from 'react';
+import { Button } from 'react-bootstrap';
 
 const Quiz = () => {
   return (
     <div>
-      <h1>SIKKEEEEEEE</h1>
-      <button>Take Our Quiz </button>
+      <h1>Campo Quiz</h1>
+      <Button>Submit</Button>
     </div>
   );
 };

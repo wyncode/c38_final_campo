@@ -6,10 +6,7 @@ const SearchBars = () => {
     <div>
       <Container className="d-flex flex-row justify-content-around">
         <Form>
-          <FormControl
-            type="text"
-            placeholder="Search by state, city, or park"
-          />
+          <FormControl type="text" placeholder="Search state, city, or park" />
         </Form>
       </Container>
     </div>
