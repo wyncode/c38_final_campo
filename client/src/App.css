@@ -28,12 +28,13 @@
 }
 
 #dateleft {
-  margin-right: 5rem;
+  margin-right: 3rem;
 }
 
 #date {
   display: flex;
   flex-direction: row;
+
   margin-top: 1rem;
   margin-bottom: 1rem;
 }

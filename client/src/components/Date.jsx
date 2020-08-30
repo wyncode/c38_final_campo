@@ -1,18 +1,20 @@
 import React from 'react';
-import { FormControl, Form } from 'react-bootstrap';
+import { FormControl, Form, FormLabel, FormGroup } from 'react-bootstrap';
 
 const Date = () => {
   return (
     <div id="date">
       <div id="dateleft">
-        <Form>
-          <FormControl id="searchbar" type="date" />
-        </Form>
+        <FormGroup>
+          <FormLabel htmlFor="fromdate">From: </FormLabel>
+          <FormControl id="fromdate" type="date" />
+        </FormGroup>
       </div>
       <div id="dateright">
-        <Form>
-          <FormControl id="searchbar" type="date" />
-        </Form>
+        <FormGroup>
+          <FormLabel htmlFor="todate">To: </FormLabel>
+          <FormControl id="searchbar" type="date" placeholder="Search..." />
+        </FormGroup>
       </div>
     </div>
   );

@@ -11,20 +11,24 @@ import SearchBars from '../components/SearchBars';
 import NavigationBar from '../components/NavigationBar';
 import { Link } from 'react-router-dom';
 import Date from '../components/Date';
+import './Home.css';
 
 const Home = () => {
   return (
     <div>
       <NavigationBar />
       <Container className="d-flex flex-column justify-content align-items-center mt-5 bg-white">
-        <h1>Wherever the campfire takes you.</h1>
-        <h6>
-          Discover America’s National Parks to unplug and enjoy a night under
-          the stars.
-        </h6>
-        <SearchBars />
-        <Date />
-        <Button>Find My Trip</Button>
+        <div id="Searchfields">
+          <h1>Wherever the campfire takes you.</h1>
+          <h6>
+            Discover America’s National Parks to unplug and enjoy a night under
+            the stars.
+          </h6>
+          <SearchBars />
+          <Date />
+          <Button>Find My Trip</Button>
+        </div>
+
         <div className="bg-secondary d-flex flex-column justify-content align-items-center mt-5 p-3 text-white">
           <h1>Need help finding an adventure?</h1>
           <h6>We can narrow it down to fit your needs.</h6>
