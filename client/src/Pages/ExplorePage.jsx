@@ -11,7 +11,6 @@ const ExplorePage = () => {
   });
 
   const [selectedPark, setSelectedPark] = useState(null);
-  console.log(process.env.REACT_APP_MAPBOX_TOKEN);
 
   useEffect(() => {
     const listener = (e) => {
