@@ -9,6 +9,7 @@ import SignupPage from './Pages/SignupPage';
 import ResetPasswordPage from './Pages/ResetPasswordPage';
 import StripeCheckout from './components/StripeCheckout';
 import Quiz from './components/Quiz';
+import ExplorePage from './Pages/ExplorePage';
 
 import './App.css';
 
@@ -24,24 +25,20 @@ const App = () => {
   useEffect(fetchDemoData, []);
 
   return (
-    <Router>
-      <Switch>
-        <Route exact path="/" component={HomePage} />
-        <Route exact path="/signin" component={SigninPage} />
-        <Route exact path="/signup" component={SignupPage} />
-        <Route exact path="/reset-password" component={ResetPasswordPage} />
-        <Route exact path="/accomodations" component={Accommodations} />
-        <Route exact path="/checkout" component={StripeCheckout} />
-        <Route exact path="/quiz" component={Quiz} />
-      </Switch>
-    </Router>
-    // <AppContextProvider>
-    //   <div id="demo">
-    //     <h3>Hello from client/src/App.js</h3>
-    //     <ContextDemo />
-    //     <h3>{serverMessage}</h3>
-    //   </div>
-    // </AppContextProvider>
+    <AppContextProvider>
+      <Router>
+        <Switch>
+          <Route exact path="/" component={HomePage} />
+          <Route exact path="/signin" component={SigninPage} />
+          <Route exact path="/signup" component={SignupPage} />
+          <Route exact path="/reset-password" component={ResetPasswordPage} />
+          <Route exact path="/accomodations" component={Accommodations} />
+          <Route exact path="/checkout" component={StripeCheckout} />
+          <Route exact path="/quiz" component={Quiz} />
+          <Route exact path="/explore" component={ExplorePage} />
+        </Switch>
+      </Router>
+    </AppContextProvider>
   );
 };
 
