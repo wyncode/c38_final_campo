@@ -25,28 +25,8 @@ const App = () => {
   // useEffect(fetchDemoData, []);
 
   return (
-<<<<<<< HEAD
-<div>
-  <Map />
-</div>
-    // <Router>
-    //   <Switch>
-    //     <Route exact path="/" component={HomePage} />
-    //     <Route exact path="/signin" component={SigninPage} />
-    //     <Route exact path="/signup" component={SignupPage} />
-    //     <Route exact path="/reset-password" component={ResetPasswordPage} />
-    //     <Route exact path="/accomodations" component={Accommodations} />
-    //   </Switch>
-    // </Router>
-    // <AppContextProvider>
-    //   <div id="demo">
-    //     <h3>Hello from client/src/App.js</h3>
-    //     <ContextDemo />
-    //     <h3>{serverMessage}</h3>
-    //   </div>
-    // </AppContextProvider>
 
-=======
+
     <AppContextProvider>
       <Router>
         <Switch>
@@ -61,7 +41,7 @@ const App = () => {
         </Switch>
       </Router>
     </AppContextProvider>
->>>>>>> master
+
   );
 };
 
