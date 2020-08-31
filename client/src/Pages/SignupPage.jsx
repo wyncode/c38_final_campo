@@ -63,7 +63,7 @@ const SignUp = ({ history }) => {
           <Button type="submit">Create Account</Button>
         </Form.Group>
       </Form>
-      <Link className="mt-4" to="/login">
+      <Link className="mt-4" to="/Signin">
         Already have an account? Login.
       </Link>
     </Container>
