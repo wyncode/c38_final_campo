@@ -28,7 +28,6 @@ const Home = () => {
           <Date />
           <Button id="buttons">Find My Trip</Button>
         </div>
-
         <div id="quizblock">
           <h1>Need help finding an adventure?</h1>
           <h6>We can narrow it down to fit your needs.</h6>
