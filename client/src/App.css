@@ -18,12 +18,16 @@ body {
 .carousel-item img {
   width: 100%;
 }
-.detail-title ul{
+.detail-title {
   display: block;
+  padding-bottom: 3%;
 }
 .detail-title-bar {
   border-bottom: 1px solid gray;
   opacity: 0.35;
+}
+.detail-description{
+  padding-top: 3%;
 }
 .detail-review p{
   font-size: 12px;
@@ -41,6 +45,42 @@ body {
 .book-button-monkey.btn{
   margin-top: 20px;
   background-color: black;
-
   border-color: black;
+  width:100%;
+}
+.detail-campsite{
+  padding-top: 5%;
+}
+.detail-campsite-card-outter {
+  padding-bottom: 5%;
+}
+.detail-campsite-card {
+  border: 0.5px solid #EC695C;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.detail-campsite-card h3{
+  padding-left: 5%;
+}
+.detail-campsite-card h4{
+  padding-left: 5%;
+}
+.detail-campsite-card ul{
+  list-style-type: none;
+  padding-left: 15%;
+}
+
+.detail-campsite-card p{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.detail-booking-card{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.detail-booking-card-price {
+  padding-bottom: 7%;
+}
+.detail-activities{
+  padding-top: 3%;
 }
