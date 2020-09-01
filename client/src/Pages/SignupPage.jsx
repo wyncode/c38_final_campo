@@ -64,7 +64,7 @@ const SignUp = ({ history }) => {
           </Form.Group>
           <Form.Group className="d-flex justify-content-center">
             <Button id="buttons" type="submit">
-              Create Account
+              <span>Create Account</span>
             </Button>
           </Form.Group>
         </Form>

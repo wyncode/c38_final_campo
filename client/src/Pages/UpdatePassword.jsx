@@ -19,7 +19,7 @@ const UpdatePassword = ({ history }) => {
       .put(
         '/api/password',
         { password: password.password },
-        { withCredentials: true },
+        { withCredentials: true }
       )
       .then((res) => {
         //add alert
@@ -48,7 +48,9 @@ const UpdatePassword = ({ history }) => {
           />
         </Form.Group>
         <Form.Group>
-          <Button type="submit">Update Password</Button>
+          <Button type="submit">
+            <span>Update Password</span>
+          </Button>
         </Form.Group>
       </Form>
     </Container>

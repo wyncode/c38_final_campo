@@ -35,7 +35,7 @@ const ResetPassword = () => {
           </Form.Group>
           <Form.Group className="d-flex justify-content-center">
             <Button id="buttons" type="submit">
-              Send Email
+              <span>Send Email</span>
             </Button>
           </Form.Group>
           <Link id="fontstyle" className="mt-2" to="/signin">
