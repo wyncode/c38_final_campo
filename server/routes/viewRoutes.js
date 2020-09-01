@@ -8,11 +8,11 @@ router.use(viewsController.alerts);
 
 router.get('/', authController.isLoggedIn, viewsController.getOverview);
 
-router.get('/tour/:slug', authController.isLoggedIn, viewsController.getPark);
+router.get('/park/:slug', authController.isLoggedIn, viewsController.getPark);
 router.get('/login', authController.isLoggedIn, viewsController.getLoginForm);
 router.get('/me', authController.protect, viewsController.getAccount);
 
-router.get('/my-parks', authController.protect, viewsController.getMyTours);
+router.get('/my-parks', authController.protect, viewsController.getMyParks);
 
 router.post(
   '/submit-user-data',
