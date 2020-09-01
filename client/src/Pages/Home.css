@@ -1,5 +1,9 @@
-#body {
+* {
   font-family: Raleway;
+}
+
+#fontstyle {
+  color: white;
 }
 
 .container {
@@ -64,6 +68,12 @@
   border: none;
 }
 
+#buttons:hover {
+  background-color: white;
+  color: #ec695c;
+  font-weight: bold;
+}
+
 .carousel {
   font-weight: bold;
   font-size: small;
@@ -71,4 +81,19 @@
 
 .d-block {
   background-position: bottom;
+}
+
+#signin,
+#signup,
+#reset-password {
+  width: 680px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #776a64;
+}
+
+#map {
 }
