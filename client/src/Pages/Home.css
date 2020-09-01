@@ -84,7 +84,8 @@
 }
 
 #signin,
-#signup {
+#signup,
+#reset-password {
   width: 680px;
   height: 600px;
   display: flex;
@@ -92,4 +93,7 @@
   align-items: center;
   justify-content: center;
   background-color: #776a64;
+}
+
+#map {
 }

@@ -16,6 +16,9 @@ const NavigationBar = () => {
           <Dropdown.Menu>
             <Dropdown.ItemText>Welcome!</Dropdown.ItemText>
             <Dropdown.Divider />
+            <Dropdown.Item as={Link} to="/">
+              Home
+            </Dropdown.Item>
             <Dropdown.Item as={Link} to="explore">
               Explore
             </Dropdown.Item>

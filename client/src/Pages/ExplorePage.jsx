@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
+import { Container } from 'react-bootstrap';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
+import NavigationBar from '../components/NavigationBar';
 
 const ExplorePage = () => {
   const [viewport, setViewport] = useState({
@@ -26,36 +28,39 @@ const ExplorePage = () => {
   }, []);
   return (
     <div>
-      <ReactMapGL
-        {...viewport}
-        mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
-        onViewportChange={(viewport) => {
-          setViewport(viewport);
-        }}
-      >
-        <Marker key={1} latitude={35.611763} longitude={-83.489548}>
-          <button
-            className="marker-btn"
-            onClick={(e) => {
-              e.preventDefault(setSelectedPark());
-            }}
-          ></button>
-        </Marker>
-        {selectedPark ? (
-          <Popup
-            latitude={selectedPark.geometry.coordinates[1]}
-            longitude={selectedPark.geometry.coordinates[0]}
-            onClose={() => {
-              setSelectedPark(null);
-            }}
-          >
-            <div>
-              <h2>NationalPark</h2>
-              <p> Smokey Mountains</p>
-            </div>
-          </Popup>
-        ) : null}
-      </ReactMapGL>
+      <NavigationBar />
+      <Container id="map">
+        <ReactMapGL
+          {...viewport}
+          mapboxApiAccessToken={process.env.REACT_APP_MAPBOX_TOKEN}
+          onViewportChange={(viewport) => {
+            setViewport(viewport);
+          }}
+        >
+          <Marker key={1} latitude={35.611763} longitude={-83.489548}>
+            <button
+              className="marker-btn"
+              onClick={(e) => {
+                e.preventDefault(setSelectedPark());
+              }}
+            ></button>
+          </Marker>
+          {selectedPark ? (
+            <Popup
+              latitude={selectedPark.geometry.coordinates[1]}
+              longitude={selectedPark.geometry.coordinates[0]}
+              onClose={() => {
+                setSelectedPark(null);
+              }}
+            >
+              <div>
+                <h2>NationalPark</h2>
+                <p> Smokey Mountains</p>
+              </div>
+            </Popup>
+          ) : null}
+        </ReactMapGL>
+      </Container>
     </div>
   );
 };
