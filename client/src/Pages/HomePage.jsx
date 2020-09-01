@@ -1,17 +1,11 @@
 import React from 'react';
-import {
-  Carousel,
-  Container,
-  FormControl,
-  Form,
-  Col,
-  Button
-} from 'react-bootstrap';
+import { Container, FormControl, Form, Col, Button } from 'react-bootstrap';
 import SearchBars from '../components/SearchBars';
 import NavigationBar from '../components/NavigationBar';
 import { Link } from 'react-router-dom';
 import Date from '../components/Date';
 import './Home.css';
+import Carousel from 'react-bootstrap/Carousel';
 
 const Home = () => {
   return (
@@ -26,13 +20,15 @@ const Home = () => {
           </h6>
           <SearchBars />
           <Date />
-          <Button id="buttons">Find My Trip</Button>
+          <Button id="buttons">
+            <span>Find My Trip</span>
+          </Button>
         </div>
         <div id="quizblock">
           <h1>Need help finding an adventure?</h1>
           <h6>We can narrow it down to fit your needs.</h6>
           <Button id="buttons" type="submit" as={Link} to="/quiz">
-            Take Our Quiz
+            <span>Take Our Quiz</span>
           </Button>
         </div>
         <div id="howitworks">
@@ -54,47 +50,39 @@ const Home = () => {
           <h3>Need more inspiration?</h3>
           <h4>Check these out.</h4>
 
-          <Carousel className="d-block w-50">
+          <Carousel
+            className="d-flex"
+            indicators={false}
+            fade={true}
+            interval={2000}
+            slide={false}
+          >
             <Carousel.Item>
               <img
-                className="d-block"
-                src="/images/Travelerstales.png"
+                className="d-flex"
+                src="/images/TravlersTales.png"
                 alt="First slide"
-                height="320"
-                width="400"
+                height="223"
+                width="215"
               />
-              <Carousel.Caption className="carousel">
-                <h3>Traveler's Tales</h3>
-                <p>Read real experiences from our camping friends.</p>
-              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block"
-                src="/images/CamperReads.png"
+                className="d-flex"
+                src="/images/CReads.png"
                 alt="Second slide"
-                height="320"
-                width="400"
+                height="223"
+                width="215"
               />
-
-              <Carousel.Caption className="carousel">
-                <h3>Camper Reads</h3>
-                <p>An array of helpful articles for any kind of camper.</p>
-              </Carousel.Caption>
             </Carousel.Item>
             <Carousel.Item>
               <img
-                className="d-block"
-                src="/images/NeedGear.png"
+                className="d-flex"
+                src="/images/Gear.png"
                 alt="Third slide"
-                height="320"
-                width="400"
+                height="223"
+                width="215"
               />
-
-              <Carousel.Caption className="carousel">
-                <h3>Need gear?</h3>
-                <p>Find all your camping needs for rent or sale.</p>
-              </Carousel.Caption>
             </Carousel.Item>
           </Carousel>
         </div>

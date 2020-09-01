@@ -35,7 +35,7 @@ const LoginPage = () => {
           </Form.Group>
           <Form.Group className="d-flex justify-content-center">
             <Button id="buttons" type="submit">
-              Sign In
+              <span>Sign In</span>
             </Button>
           </Form.Group>
         </Form>
