@@ -1,0 +1,99 @@
+* {
+  font-family: Raleway;
+}
+
+#fontstyle {
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#Searchblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/Fireside.png');
+  background-position: bottom;
+  color: white;
+  width: 680px;
+  height: 600px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+#quizblock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/Range.jpg');
+  background-position: center;
+  color: white;
+  width: 680px;
+  height: 400px;
+  background-repeat: no-repeat;
+}
+
+#howitworks {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: #776a64;
+  width: 680px;
+  height: 600px;
+}
+
+#articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 680px;
+  height: 500px;
+  background-color: rgba(150, 150, 122, 0.78);
+}
+
+#buttons {
+  background-color: #ec695c;
+  color: white;
+  border: none;
+}
+
+#buttons:hover {
+  background-color: white;
+  color: #ec695c;
+  font-weight: bold;
+}
+
+.carousel {
+  font-weight: bold;
+  font-size: small;
+}
+
+.d-block {
+  background-position: bottom;
+}
+
+#signin,
+#signup,
+#reset-password {
+  width: 680px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #776a64;
+}
+
+#map {
+}

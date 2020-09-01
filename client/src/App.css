@@ -84,3 +84,15 @@ body {
 .detail-activities{
   padding-top: 3%;
 }
+
+#dateleft {
+  margin-right: 3rem;
+}
+
+#date {
+  display: flex;
+  flex-direction: row;
+
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

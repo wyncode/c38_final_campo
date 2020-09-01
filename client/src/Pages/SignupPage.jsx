@@ -4,6 +4,7 @@ import { Container, Form, Button } from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import swal from 'sweetalert';
+import NavigationBar from '../components/NavigationBar';
 
 const SignUp = ({ history }) => {
   const [formData, setFormData] = useState(null);
@@ -26,47 +27,52 @@ const SignUp = ({ history }) => {
   };
 
   return (
-    <Container className="container d-flex flex-column align-items-center justify-content-center fullscreen">
-      <h1 className="mb-4">Campo</h1>
-      <Form style={{ width: 300 }} onSubmit={handleSubmit}>
-        <Form.Group>
-          <Form.Label htmlFor="fullName">Full Name</Form.Label>
-          <Form.Control
-            id="fullName"
-            type="text"
-            placeholder="Full Name"
-            name="name"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor="email">Email Address</Form.Label>
-          <Form.Control
-            id="email"
-            type="email"
-            placeholder="Email Address"
-            name="email"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group>
-          <Form.Label htmlFor="password">Password</Form.Label>
-          <Form.Control
-            id="password"
-            type="password"
-            placeholder="Password"
-            name="password"
-            onChange={handleChange}
-          />
-        </Form.Group>
-        <Form.Group className="d-flex justify-content-center">
-          <Button type="submit">Create Account</Button>
-        </Form.Group>
-      </Form>
-      <Link className="mt-4" to="/login">
-        Already have an account? Login.
-      </Link>
-    </Container>
+    <div>
+      <NavigationBar />
+      <Container id="signup">
+        <h1>Welcome to Campo</h1>
+        <Form style={{ width: 300 }} onSubmit={handleSubmit}>
+          <Form.Group>
+            <Form.Label htmlFor="fullName">Full Name</Form.Label>
+            <Form.Control
+              id="fullName"
+              type="text"
+              placeholder="Full Name"
+              name="name"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="email">Email Address</Form.Label>
+            <Form.Control
+              id="email"
+              type="email"
+              placeholder="Enter Email"
+              name="email"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group>
+            <Form.Label htmlFor="password">Password</Form.Label>
+            <Form.Control
+              id="password"
+              type="password"
+              placeholder="Enter Password"
+              name="password"
+              onChange={handleChange}
+            />
+          </Form.Group>
+          <Form.Group className="d-flex justify-content-center">
+            <Button id="buttons" type="submit">
+              Create Account
+            </Button>
+          </Form.Group>
+        </Form>
+        <Link id="fontstyle" className="mt-4" to="/Signin">
+          Already have an account? Login.
+        </Link>
+      </Container>
+    </div>
   );
 };
 
