@@ -27,7 +27,7 @@ const SignUp = ({ history }) => {
   };
 
   return (
-    <div id="body">
+    <div>
       <NavigationBar />
       <Container id="signup">
         <h1>Welcome to Campo</h1>

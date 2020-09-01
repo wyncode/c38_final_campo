@@ -20,7 +20,7 @@ const ResetPassword = () => {
   };
 
   return (
-    <div id="body">
+    <div>
       <NavigationBar />
       <Container id="reset-password">
         <h1>Reset Password</h1>
