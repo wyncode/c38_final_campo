@@ -1,6 +1,6 @@
-const Park = require('../models/parkModel');
-const User = require('../models/userModel');
-const Booking = require('../models/bookingModel');
+const Park = require('../db/models/parkModel');
+const User = require('../db/models/userModel');
+const Booking = require('../db/models/bookingModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
@@ -20,7 +20,7 @@ exports.getOverview = catchAsync(async (req, res, next) => {
   // 3) Render that template using tour data from 1)
   res.status(200).render('overview', {
     title: 'All Parks',
-    tours
+    parks
   });
 });
 
@@ -38,7 +38,7 @@ exports.getPark = catchAsync(async (req, res, next) => {
   // 2) Build template
   // 3) Render template using data from 1)
   res.status(200).render('park', {
-    title: `${tour.name} Park`,
+    title: `${park.name} Park`,
     tour
   });
 });

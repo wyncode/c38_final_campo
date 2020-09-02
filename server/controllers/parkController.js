@@ -1,6 +1,6 @@
 const multer = require('multer');
 const sharp = require('sharp');
-const Park = require('./../models/parkModel');
+const Park = require('./../db/models/parkModel');
 const catchAsync = require('./../utils/catchAsync');
 const factory = require('./handlerFactory');
 const AppError = require('./../utils/appError');
@@ -107,7 +107,7 @@ exports.getParkStats = catchAsync(async (req, res, next) => {
 exports.getMonthlyPlan = catchAsync(async (req, res, next) => {
   const year = req.params.year * 1; // 2021
 
-  const plan = await Tour.aggregate([
+  const plan = await Park.aggregate([
     {
       $unwind: '$startDates'
     },

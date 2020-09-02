@@ -14,9 +14,10 @@ router.use('/:parkId/reviews', reviewRouter);
 
 router
   .route('/top-5-cheap')
-  .get(tourController.aliasTopParks, parkController.getAllParks);
+  .get(parkController.aliasTopParks, parkController.getAllParks);
 
 router.route('/park-stats').get(parkController.getParkStats);
+
 router
   .route('/monthly-plan/:year')
   .get(
