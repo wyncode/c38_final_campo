@@ -11,6 +11,7 @@ import StripePay from './Pages/StripePay';
 import Quiz from './components/Quiz';
 import ExplorePage from './Pages/ExplorePage';
 
+
 import './App.css';
 
 const App = () => {
@@ -32,7 +33,7 @@ const App = () => {
           <Route exact path="/signin" component={SigninPage} />
           <Route exact path="/signup" component={SignupPage} />
           <Route exact path="/reset-password" component={ResetPasswordPage} />
-          <Route exact path="/accomodations" component={Accommodations} />
+          <Route exact path="/accommodations" component={Accommodations} />
           <Route exact path="/checkout" component={StripePay} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/explore" component={ExplorePage} />
