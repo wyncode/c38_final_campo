@@ -1,9 +1,9 @@
 const fs = require('fs');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv');
-const Park = require('./../../models/parkModel');
-const Review = require('./../../models/reviewModel');
-const User = require('./../../models/userModel');
+const Park = require('../models/parkModel');
+const Review = require('../models/reviewModel');
+const User = require('../models/userModel');
 
 dotenv.config({ path: './config.env' });
 
@@ -19,7 +19,7 @@ mongoose
     useUnifiedTopology: true,
     useFindAndModify: false
   })
-  .then(() => console.log('DB connection successful!'));
+  .then(() => console.log('DB connection successful!!!!!!!!'));
 
 // READ JSON FILE
 const parks = JSON.parse(fs.readFileSync(`${__dirname}/parks.json`, 'utf-8'));
