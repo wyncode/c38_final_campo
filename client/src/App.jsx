@@ -11,7 +11,7 @@ import StripePay from './Pages/StripePay';
 import Quiz from './components/Quiz';
 import ExplorePage from './Pages/ExplorePage';
 
-import styled from 'styled-components';
+
 import './App.css';
 
 const App = () => {

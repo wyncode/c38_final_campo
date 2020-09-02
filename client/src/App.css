@@ -1,15 +1,14 @@
-body {
-  background: #EEEAE5;
+#bg {
+  background-color: #EFEAE5;
 }
 
 .detail-container{
   padding:30px;
   margin:30px;
-  /* background:#EEEAE5; */
 
 }
 .accommodations-header {
-  padding-top: 8%;
+  padding-top: 1.5%;
   padding-bottom: 5%;
 }
 .carousel-slide {
@@ -42,6 +41,12 @@ body {
   padding-right: 5%;
 }
 
+.detail-booking-card {
+  border: .5px solid gray;
+  padding-top: 10%;
+  padding-bottom: 10%;
+}
+
 .book-button-monkey.btn{
   margin-top: 20px;
   background-color: black;
@@ -69,7 +74,11 @@ body {
   list-style-type: none;
   padding-left: 15%;
 }
-
+.detail-campsite-card img {
+  padding-top: 5px;
+  padding-left:12px;
+  height: 30px;
+}
 .detail-campsite-card p{
   padding-left: 10%;
   padding-right: 10%;
@@ -84,7 +93,17 @@ body {
 .detail-activities{
   padding-top: 3%;
 }
-
+.detail-review-card{
+  border: 0.5px solid #EC695C;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+.detail-review-card h4,
+.detail-review-card h5,
+.detail-review-card p{
+  padding-left: 5%;
+  padding-right: 5%;
+}
 #dateleft {
   margin-right: 3rem;
 }
@@ -96,3 +115,4 @@ body {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+
