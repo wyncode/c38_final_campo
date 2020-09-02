@@ -32,6 +32,7 @@
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0",
     "pug": "^3.0.0",
+    "react-dates": "^21.8.0",
     "react-map-gl": "^5.2.7",
     "react-router-dom": "^5.2.0",
     "react-stripe-checkout": "^2.6.3",
