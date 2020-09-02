@@ -1,5 +1,5 @@
-const Park = require('../models/parkModel');
-const User = require('../models/userModel');
+const Park = require('../db/models/parkModel');
+const User = require('../db/models/userModel');
 const Booking = require('../models/bookingModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
