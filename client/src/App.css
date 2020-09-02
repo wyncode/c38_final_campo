@@ -53,6 +53,10 @@
   border-color: black;
   width:100%;
 }
+.book-button-monkey.btn:hover{
+  background-color: #EC695C;
+  color:white;
+}
 .detail-campsite{
   padding-top: 5%;
 }

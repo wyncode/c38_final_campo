@@ -16,40 +16,8 @@ class Accommodations extends React.Component {
       facilityID: 'test'
     }
   }
-  // connection to the api from recreation that which andrew thinks is a pointless endeavour 
-  // but this is what happens when you're a women in tech
-  // componentDidMount(){
-  //   axios.get(`/api/accommodations/${this.state.facilityID}`)
-  //   .then((data) =>{
-  //     this.setState({title: data.data.Title})
-  //     this.setState({overview: data.data.Overview})
-  //     this.setState({recreation: data.data.Recreation})
-  //     this.setState({facilities: data.data.Facilities})
-  //     this.setState({natural_features: data.data.Natural_Features})
-  //     this.setState({nearby_attractions: data.data.Nearby_Attractions})
-  //     this.setState({directions: data.data.Directions})
-  //     this.setState({attributes: data.data.Attributes})
-  //     this.setState({activites: data.data.Activities})
-  //     this.setState({images: data.data.Images})
-  //   })
-  //   .catch((error) => {console.log(error)})
-  // }
+  
   render(){
-    // let images;
-    // let amenities;
-    // if (this.state.images){
-    //   images = this.state.images.map(item =>(
-        // <Carousel.Item>
-        //   <Image
-        //     src={item}
-        //   />
-        // </Carousel.Item>));
-    // }
-    // if (this.state.attributes){
-    //   amenities = this.state.attributes.map(item =>(
-    //     <li>{item}</li>
-    //   ));
-    // }
 
     return (
       <Container className="detail-container">
