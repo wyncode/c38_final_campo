@@ -1,4 +1,10 @@
+
+
 const mongoose = require('mongoose');
+const slugify = require('slugify');
+
+
+
 const parkSchema = new mongoose.Schema(
     {
       name: {
@@ -40,7 +46,7 @@ const parkSchema = new mongoose.Schema(
       },
       price: {
         type: Number,
-        required: [true, 'A tour must have a price']
+        required: [true, 'A campsite must have a price']
       },
       priceDiscount: {
         type: Number,
@@ -112,3 +118,44 @@ const parkSchema = new mongoose.Schema(
       toObject: { virtuals: true }
     }
   );
+
+  parkSchema.index({ price: 1, ratingsAverage: -1 });
+  parkSchema.index({ slug: 1 });
+  parkSchema.index({ startLocation: '2dsphere' });
+  
+  parkSchema.virtual('durationWeeks').get(function() {
+    return this.duration / 7;
+  });
+  
+  // Virtual populate
+  parkSchema.virtual('reviews', {
+    ref: 'Review',
+    foreignField: 'park',
+    localField: '_id'
+  });
+  
+  // DOCUMENT MIDDLEWARE: runs before .save() and .create()
+  parkSchema.pre('save', function(next) {
+    this.slug = slugify(this.name, { lower: true });
+    next();
+  });
+  
+
+  parkSchema.pre(/^find/, function(next) {
+    this.find({ secretPark: { $ne: true } });
+  
+    this.start = Date.now();
+    next();
+  });
+  
+  parkSchema.pre(/^find/, function(next) {
+    this.populate({
+      path: 'guides',
+      select: '-__v -passwordChangedAt'
+    });
+  
+    next();
+  });
+  
+  const Park = mongoose.model('Park', parkSchema);
+  module.exports = Park;
