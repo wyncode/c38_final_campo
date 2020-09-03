@@ -37,7 +37,7 @@ class Accommodations extends React.Component {
                 <Col>
                   <Row><h1>Pinecrest Group Campground</h1></Row>
                   <Row className="detail-review">
-                    <p>97%{' '}<span>(145)</span>Reviews ⭐️⭐️⭐️⭐️⭐️</p>
+                    <p>97%{' '}<span>(145)</span>Reviews <Image src={require('../assets/Icons/Star reviews.png')}/></p>
                   </Row>
                 </Col>
             </Row>
@@ -52,12 +52,12 @@ class Accommodations extends React.Component {
               <Col>
                 <div className="detail-campsite-card-outter">
                   <div className="detail-campsite-card">
-                    <Row><h3>Campsite Area</h3><Image src={require('../assets/Icons/Cabin Icon.png')}/></Row> 
+                    <Row><h3>Campsite Area</h3></Row> 
                     <Row>
                       <ul>
-                        <li>Group Standard Area</li>
-                        <li>Overnight</li>
-                        <li>Nonelectric</li>
+                        <li><Image src={require('../assets/Icons/noun_guests_122299.svg')}/> Group Standard Area</li>
+                        <li><Image src={require('../assets/Icons/noun_RV_3241806.svg')}/> Overnight</li>
+                        <li><Image src={require('../assets/Icons/noun_Electricity_2169306.svg')}/> Nonelectric</li>
                       </ul>
                     </Row>
                   </div>
@@ -67,10 +67,10 @@ class Accommodations extends React.Component {
                     <Row><h3>Essentials</h3></Row> 
                     <Row>
                       <ul>
-                        <li>No covered picnic areas</li>
-                        <li>No toilets</li>
-                        <li>No hookups</li>
-                        <li>No water</li>
+                        <li><Image src={require('../assets/Icons/noun_cabin_3358008.svg')}/> No covered picnic areas</li>
+                        <li><Image src={require('../assets/Icons/noun_Toilet_3130377.svg')}/> No toilets</li>
+                        <li><Image src={require('../assets/Icons/noun_sewage pipe_2203299.svg')}/> No hookups</li>
+                        <li><Image src={require('../assets/Icons/noun_Water_3495628.svg')}/> No water</li>
                       </ul>
                     </Row>
                   </div>
@@ -80,13 +80,13 @@ class Accommodations extends React.Component {
                     <Row><h3>Amenities</h3></Row> 
                     <Row>
                       <ul>
-                        <li>Tables</li>
-                        <li>Fire Pit</li>
-                        <li>Picnic Table</li>
-                        <li>Vault Toilets</li>
-                        <li>Accessibility</li>
-                        <li>Quiet Area</li>
-                        <li>Grills/Fire Ring</li>
+                        <li><Image src={require('../assets/Icons/noun_reed_3117167.svg')}/> Tables</li>
+                        <li><Image src={require('../assets/Icons/noun_Campfire_1391536.svg')}/> Fire Pit</li>
+                        <li><Image src={require('../assets/Icons/noun_Picnic Table_744567.svg')}/> Picnic Table</li>
+                        <li><Image src={require('../assets/Icons/noun_jacuzzi_3347734.svg')}/> Vault Toilets</li>
+                        <li><Image src={require('../assets/Icons/noun_Accessibility_1273315.svg')}/> Accessibility</li>
+                        <li><Image src={require('../assets/Icons/noun_forest_2875962.svg')}/> Quiet Area</li>
+                        <li><Image src={require('../assets/Icons/noun_Spatula_1976953.svg')}/> Grills/Fire Ring</li>
                       </ul>
                     </Row>
                   </div>
@@ -100,15 +100,18 @@ class Accommodations extends React.Component {
                 <Row><h2>Activities</h2></Row>
                 <Row><h3>Offered near campground</h3></Row>
                 <div className="detail-campsite-card-outter">
-                  <div className="detail-campsite-card">
+                  <div className="detail-activities-card">
+                  <Image src={require('../assets/Icons/noun_Bike_2279318.svg')}/>
                     <Row><h4>Biking</h4></Row>
                     <Row>
+                      
                       <p>Biking trails are available in this area. Bring your own mountain bike or rent one from our rental locations.</p>
                     </Row>
                   </div>
                 </div>
                 <div className="detail-campsite-card-outter">
-                  <div className="detail-campsite-card">
+                  <div className="detail-activities-card">
+                  <Image  src={require('../assets/Icons/noun_Hiking_3402699.svg')}/>
                     <Row><h4>Hiking</h4></Row>
                     <Row>
                       <p>There are many interesting hiking trails in the surrounding area. Sovereign Trails is a popular one to try.  </p>
@@ -116,7 +119,8 @@ class Accommodations extends React.Component {
                   </div>
                 </div>
                 <div className="detail-campsite-card-outter">
-                  <div className="detail-campsite-card">
+                  <div className="detail-activities-card">
+                    <Image src={require('../assets/Icons/noun_Fishing_1750119.svg')}/>
                     <Row><h4>Fishing</h4></Row>
                     <Row>
                       <p>Fishing near the Clextonia River is a fun pastime to do during a lazy afternoon. We have rods for rent and bait for purchase.</p>
@@ -133,6 +137,7 @@ class Accommodations extends React.Component {
                 <div className="detail-campsite-card-outter">
                   <div className="detail-review-card">
                     <Row><h4>Taylor</h4></Row>
+                    <Image src={require('../assets/Icons/Star reviews.png')}/>
                     <Row><h5>Amazing Experience!</h5></Row>
                     <Row>
                       <p>Had such a great time here. Mandala Cabin is for sure the best place in Arches National Park. Will be back next year.</p>
@@ -158,7 +163,7 @@ class Accommodations extends React.Component {
                 />
               </Row>
               <Row>
-                <Button className="book-button-monkey"> Book Now </Button>
+                <Button variant="dark" className="book-button"> Book Now </Button>
               </Row>
             </div>
           </Col>
