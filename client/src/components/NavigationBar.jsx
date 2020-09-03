@@ -19,15 +19,19 @@ const NavigationBar = () => {
             <Dropdown.Item as={Link} to="/">
               Home
             </Dropdown.Item>
-            <Dropdown.Item as={Link} to="explore">
+            <Dropdown.Item as={Link} to="/explore">
               Explore
             </Dropdown.Item>
-            <Dropdown.Item>Quiz</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/quiz">
+              Quiz
+            </Dropdown.Item>
             <Dropdown.Item>Articles</Dropdown.Item>
             <Dropdown.Item>Reviews</Dropdown.Item>
             <Dropdown.Item>Gear</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>My Profile</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/profile">
+              My Profile
+            </Dropdown.Item>{' '}
             <Dropdown.Item>My Getaways</Dropdown.Item>
             <Dropdown.Item as={Link} to="/signin">
               Login

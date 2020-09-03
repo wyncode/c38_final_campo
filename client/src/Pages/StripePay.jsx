@@ -45,7 +45,7 @@ const Stripe = () => {
             ${pricePerNight} x {numberOfNights} nights
           </h6>
 
-          <div id="fees">
+          <div id="fees" className="pt-2">
             <span>Park Fees</span>
             <span>$200.00</span>
           </div>

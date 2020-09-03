@@ -1,7 +1,7 @@
 const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
-const Park = require('../models/parkModel');
-const User = require('../models/userModel');
-const Booking = require('../models/bookingModel');
+const Park = require('../db/models/parkModel');
+const User = require('../db/models/userModel');
+const Booking = require('../db/models/bookingModel');
 const catchAsync = require('../utils/catchAsync');
 const factory = require('./handlerFactory');
 
@@ -23,7 +23,7 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
     line_items: [
       {
         name: `${park.name} Park`,
-        description: tour.summary,
+        description: park.summary,
         images: [
           `${req.protocol}://${req.get('host')}/img/parks/${park.imageCover}`
         ],

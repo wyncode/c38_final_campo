@@ -56,5 +56,5 @@ ParkSchema.pre('save', async function(next) {
   next();
 });
 
-module.exports = mongoose.model('Park', ParkSchema);
+// module.exports = mongoose.model('Park', ParkSchema);
 
