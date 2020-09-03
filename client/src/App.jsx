@@ -30,6 +30,7 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route exact path="/accommodations" component={Accommodations} />
           <Route exact path="/signin" component={SigninPage} />
           <Route exact path="/signup" component={SignupPage} />
           <Route exact path="/reset-password" component={ResetPasswordPage} />
