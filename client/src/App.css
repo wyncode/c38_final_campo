@@ -47,16 +47,18 @@
   padding-bottom: 10%;
 }
 
-.book-button-monkey.btn{
+.book-button.btn{
   margin-top: 20px;
   background-color: black;
   border-color: black;
   width:100%;
 }
-.book-button-monkey.btn:hover{
+.book-button.btn:hover{
   background-color: #EC695C;
   color:white;
+  border: none;
 }
+
 .detail-campsite{
   padding-top: 5%;
 }
@@ -64,6 +66,7 @@
   padding-bottom: 5%;
 }
 .detail-campsite-card {
+  padding-top: 5%;
   border: 0.5px solid #EC695C;
   box-sizing: border-box;
   border-radius: 4px;
@@ -98,15 +101,35 @@
   padding-top: 3%;
 }
 .detail-review-card{
+  padding-top: 5%;
   border: 0.5px solid #EC695C;
   box-sizing: border-box;
   border-radius: 4px;
 }
 .detail-review-card h4,
 .detail-review-card h5,
-.detail-review-card p{
+.detail-review-card p,
+.detail-review-card img{
   padding-left: 5%;
   padding-right: 5%;
+}
+.detail-activities-card{
+  padding-top: 2%;
+  border: 0.5px solid #EC695C;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.detail-activities-card h4,
+.detail-activities-card img {
+  padding-left: 5%;
+}
+.detail-activities-card p{
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.detail-activities-card img{
+  height:50px;
 }
 #dateleft {
   margin-right: 3rem;
