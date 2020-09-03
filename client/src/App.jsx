@@ -10,7 +10,7 @@ import ResetPasswordPage from './Pages/ResetPasswordPage';
 import StripePay from './Pages/StripePay';
 import Quiz from './components/Quiz';
 import ExplorePage from './Pages/ExplorePage';
-
+import Profile from './Pages/ProfilePage';
 
 import './App.css';
 
@@ -33,7 +33,7 @@ const App = () => {
           <Route exact path="/signin" component={SigninPage} />
           <Route exact path="/signup" component={SignupPage} />
           <Route exact path="/reset-password" component={ResetPasswordPage} />
-          <Route exact path="/accommodations" component={Accommodations} />
+          <Route exact path="/profile" component={Profile} />
           <Route exact path="/checkout" component={StripePay} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/explore" component={ExplorePage} />

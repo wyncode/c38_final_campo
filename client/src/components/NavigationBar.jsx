@@ -29,7 +29,9 @@ const NavigationBar = () => {
             <Dropdown.Item>Reviews</Dropdown.Item>
             <Dropdown.Item>Gear</Dropdown.Item>
             <Dropdown.Divider />
-            <Dropdown.Item>My Profile</Dropdown.Item>
+            <Dropdown.Item as={Link} to="/profile">
+              My Profile
+            </Dropdown.Item>{' '}
             <Dropdown.Item>My Getaways</Dropdown.Item>
             <Dropdown.Item as={Link} to="/signin">
               Login

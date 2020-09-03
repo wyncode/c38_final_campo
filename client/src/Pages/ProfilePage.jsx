@@ -1,8 +1,8 @@
 import React, { useContext, useState } from 'react';
 import { Container, Image, Button } from 'react-bootstrap';
-import Navigation from '../components/Navigation';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
+import NavigationBar from '../components/NavigationBar';
 
 const Profile = ({ history }) => {
   const [preview, setPreview] = useState(null);
@@ -34,7 +34,7 @@ const Profile = ({ history }) => {
       await axios({
         method: 'DELETE',
         url: '/api/users/me',
-        withCredentials: true,
+        withCredentials: true
       });
       setLoading(false);
       sessionStorage.removeItem('user');
@@ -47,8 +47,8 @@ const Profile = ({ history }) => {
 
   return (
     <>
-      <Navigation />
-      <Container className="d-flex flex-column align-items-center justify-content-center">
+      <NavigationBar />
+      <Container>
         <h1>Your Profile</h1>
         <div>
           <Image
@@ -68,7 +68,7 @@ const Profile = ({ history }) => {
         <div className="mt-4">
           <form className="d-flex flex-column" onSubmit={handleImage}>
             <input type="file" accept="image/*" onChange={handleChange} />
-            <Button className="mt-2" type="submit">
+            <Button id="buttons" className="mt-2" type="submit">
               Save Image
             </Button>
           </form>
@@ -78,7 +78,7 @@ const Profile = ({ history }) => {
           <p>Email: {currentUser?.email}</p>
         </div>
         <div>
-          <Button variant="danger" onClick={handleDelete}>
+          <Button id="buttons" variant="danger" onClick={handleDelete}>
             Delete Account
           </Button>
         </div>
