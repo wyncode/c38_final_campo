@@ -7,7 +7,7 @@
   margin: 30px;
 }
 .accommodations-header {
-  padding-top: 3%;
+  padding-top: 1.5%;
   padding-bottom: 5%;
 }
 .carousel-slide {
@@ -41,7 +41,7 @@
 }
 
 .detail-booking-card {
-  border: 0.5px solid gray;
+  border: 1px solid gray;
   padding-top: 10%;
   padding-bottom: 10%;
 }
@@ -114,7 +114,7 @@
 }
 .detail-activities-card {
   padding-top: 2%;
-  border: 0.5px solid #ec695c;
+  border: 1px solid #ec695c;
   box-sizing: border-box;
   border-radius: 4px;
 }
