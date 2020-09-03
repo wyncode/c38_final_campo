@@ -37,6 +37,7 @@ const App = () => {
           <Route exact path="/checkout" component={StripePay} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/explore" component={ExplorePage} />
+          <Route exact path="/accommodations" component={Accommodations} />
         </Switch>
       </Router>
     </AppContextProvider>

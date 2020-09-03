@@ -1,0 +1,57 @@
+[
+  {
+    "_id": "",
+    "name": "Biscayne National Park",
+    "duration": 7,
+    "maxGroupSize": 15,
+    "difficulty": "medium",
+    "guides": [],
+    "price": 47,
+    "summary": "Located in South Florida.Located in South Florida.",
+    "imageCover": "park-2-cover.jpg",
+    "startLocation": {
+      "description": "Miami, USA",
+      "type": "Point",
+      "coordinates": [-80.2083, 25.4824],
+      "address": "301 Biscayne Blvd, Miami, FL 33132, USA"
+    },
+    "ratingsAverage": 4.8,
+    "ratingsQuantity": 6,
+    "images": [],
+    "startDates": [
+      "2021-06-19T09:00:00.000Z",
+      "2021-07-20T09:00:00.000Z",
+      "2021-08-18T09:00:00.000Z"
+    ],
+    "locations": [
+      {
+        "_id": "",
+        "description": "Campsite 1",
+        "type": "Point",
+        "coordinates": [-80.128473, 25.781842],
+        "day": 1
+      },
+      {
+        "_id": "",
+        "description": "Campsite 2",
+        "type": "Point",
+        "coordinates": [-80.647885, 24.909047],
+        "day": 2
+      },
+      {
+        "_id": "",
+        "description": "Campsite 3",
+        "type": "Point",
+        "coordinates": [-81.0784, 24.707496],
+        "day": 3
+      },
+      {
+        "_id": "",
+        "description": "Campsite 4",
+        "type": "Point",
+        "coordinates": [-81.768719, 24.552242],
+        "day": 4
+      }
+    ]
+  }
+]
