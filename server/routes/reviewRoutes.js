@@ -9,11 +9,11 @@ router.use(authController.protect);
 router
   .route('/')
   .get(reviewController.getAllReviews)
-  .post(
-    authController.restrictTo('user'),
-    reviewController.setParkUserIds,
-    reviewController.createReview
-  );
+  // .post(
+  //   authController.restrictTo('user'),
+  //   reviewController.setParkUserIds,
+  //   reviewController.createReview
+  // );
 
 router
   .route('/:id')
