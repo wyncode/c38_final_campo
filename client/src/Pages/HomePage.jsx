@@ -20,7 +20,7 @@ const Home = () => {
           </h6>
           <SearchBars />
           <Date />
-          <Button id="buttons">
+          <Button as={Link} to="/accommodations" id="buttons">
             <span>Find My Trip</span>
           </Button>
         </div>
