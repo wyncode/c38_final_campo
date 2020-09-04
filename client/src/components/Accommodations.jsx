@@ -39,7 +39,9 @@ class Accommodations extends React.Component {
                 <Row className="detail-review">
                   <p>
                     97% <span>(145)</span>Reviews{' '}
+
                     <Image src={require('../assets/Icons/Star reviews.png')} />
+
                   </p>
                 </Row>
               </Col>
@@ -112,7 +114,9 @@ class Accommodations extends React.Component {
                         </li>
                         <li>
                           <Image
+
                             src={require('../assets/Icons/noun_sewage pipe_2203299.svg')}
+
                           />{' '}
                           No hookups
                         </li>
@@ -147,7 +151,9 @@ class Accommodations extends React.Component {
                         </li>
                         <li>
                           <Image
+
                             src={require('../assets/Icons/noun_Picnic Table_744567.svg')}
+
                           />{' '}
                           Picnic Table
                         </li>
@@ -195,10 +201,12 @@ class Accommodations extends React.Component {
                     <Image
                       src={require('../assets/Icons/noun_Bike_2279318.svg')}
                     />
+
                     <Row>
                       <h4>Biking</h4>
                     </Row>
                     <Row>
+
                       <p>
                         Biking trails are available in this area. Bring your own
                         mountain bike or rent one from our rental locations.
@@ -228,10 +236,12 @@ class Accommodations extends React.Component {
                     <Image
                       src={require('../assets/Icons/noun_Fishing_1750119.svg')}
                     />
+
                     <Row>
                       <h4>Fishing</h4>
                     </Row>
                     <Row>
+
                       <p>
                         Fishing near the Clextonia River is a fun pastime to do
                         during a lazy afternoon. We have rods for rent and bait
@@ -256,7 +266,9 @@ class Accommodations extends React.Component {
                     <Row>
                       <h4>Taylor</h4>
                     </Row>
+
                     <Image src={require('../assets/Icons/Star reviews.png')} />
+
                     <Row>
                       <h5>Amazing Experience!</h5>
                     </Row>
@@ -294,12 +306,14 @@ class Accommodations extends React.Component {
                 />
               </Row>
               <Row>
+
                 <Button
                   as={Link}
                   to="/checkout"
                   variant="dark"
                   className="book-button"
                 >
+
                   {' '}
                   Book Now{' '}
                 </Button>
