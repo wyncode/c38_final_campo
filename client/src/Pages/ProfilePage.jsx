@@ -1,8 +1,17 @@
 import React, { useContext, useState } from 'react';
-import { Container, Image, Button } from 'react-bootstrap';
+import {
+  Container,
+  Image,
+  Button,
+  Form,
+  FormControl,
+  FormLabel,
+  FormGroup
+} from 'react-bootstrap';
 import { AppContext } from '../context/AppContext';
 import axios from 'axios';
 import NavigationBar from '../components/NavigationBar';
+import './Profile.css';
 
 const Profile = ({ history }) => {
   const [preview, setPreview] = useState(null);
@@ -46,9 +55,9 @@ const Profile = ({ history }) => {
   };
 
   return (
-    <>
+    <div id="profile">
       <NavigationBar />
-      <Container>
+      <Container className="container">
         <h1>Your Profile</h1>
         <div>
           <Image
@@ -57,33 +66,41 @@ const Profile = ({ history }) => {
                 ? preview
                 : currentUser?.avatar
                 ? currentUser.avatar
-                : 'https://files.willkennedy.dev/wyncode/wyncode.png'
+                : '/images/CampoTent.png'
             }
             alt="profilePic"
-            width={250}
-            height={250}
+            width={200}
+            height={200}
             roundedCircle
           />
         </div>
-        <div className="mt-4">
-          <form className="d-flex flex-column" onSubmit={handleImage}>
-            <input type="file" accept="image/*" onChange={handleChange} />
+        <div className="mt-4" id="images">
+          <Form.Group onSubmit={handleImage}>
+            <Form.Control
+              type="file"
+              accept="image/*"
+              onChange={handleChange}
+            />
             <Button id="buttons" className="mt-2" type="submit">
-              Save Image
+              <span>Save Image</span>
             </Button>
-          </form>
+          </Form.Group>
         </div>
         <div className="mt-4">
-          <p>Name: {currentUser?.name}</p>
-          <p>Email: {currentUser?.email}</p>
+          <FormGroup>
+            <FormLabel>Name: </FormLabel>
+            <FormControl type="text" placeholder="Your Name"></FormControl>
+            <FormLabel>Email: </FormLabel>
+            <FormControl type="text" placeholder="Your Email"></FormControl>
+          </FormGroup>
         </div>
         <div>
           <Button id="buttons" variant="danger" onClick={handleDelete}>
-            Delete Account
+            <span>Delete Account</span>
           </Button>
         </div>
       </Container>
-    </>
+    </div>
   );
 };
 
