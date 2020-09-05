@@ -3,7 +3,7 @@ import { Container, FormControl, Form, Col, Button } from 'react-bootstrap';
 import SearchBars from '../components/SearchBars';
 import NavigationBar from '../components/NavigationBar';
 import { Link } from 'react-router-dom';
-import Date from '../components/Date';
+
 import './Home.css';
 import Carousel from 'react-bootstrap/Carousel';
 
@@ -19,7 +19,7 @@ const Home = () => {
             the stars.
           </h6>
           <SearchBars />
-          <Date />
+
           <Button as={Link} to="/accommodations" id="buttons">
             <span>Find My Trip</span>
           </Button>

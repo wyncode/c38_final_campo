@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Container, Form, FormControl } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import data from '../parks-simple.json';
 
 const SearchBars = () => {
@@ -24,13 +25,14 @@ const SearchBars = () => {
           <FormControl
             value={inputValue && inputValue.name}
             type="text"
-            placeholder="Search by state, city, or park"
+            placeholder="Search by Park"
             onChange={(e) => searchHandle(e)}
           />
           <div style={{ height: `100px`, overflow: `scroll` }}>
             {inputValue &&
               inputValue.map((item) => (
-                <p
+                <Link
+                  to="/accommodations"
                   style={{
                     backgroundColor: `white`,
                     width: `500px`,
@@ -40,7 +42,7 @@ const SearchBars = () => {
                   }}
                 >
                   {item.name}
-                </p>
+                </Link>
               ))}
             <div></div>
           </div>

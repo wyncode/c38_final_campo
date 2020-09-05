@@ -23,9 +23,15 @@ class Accommodations extends React.Component {
       <Container className="detail-container">
         <NavigationBar />
         <Row className="accommodations-header">
-          <Carousel className="carousel-slide">
+          <Carousel className="d-flex ">
             <Carousel.Item>
-              <Image src="/images/Fireside.png" />
+              <Image src="/images/Park.jpg" width="100" height="500" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src="/images/Valley.jpg" width="100" height="500" />
+            </Carousel.Item>
+            <Carousel.Item>
+              <Image src="/images/ClearLake.jpg" width="100" height="500" />
             </Carousel.Item>
           </Carousel>
         </Row>
@@ -34,7 +40,7 @@ class Accommodations extends React.Component {
             <Row className="detail-title">
               <Col>
                 <Row>
-                  <h1>Pinecrest Group Campground</h1>
+                  <h1>Yellowstone National Park</h1>
                 </Row>
                 <Row className="detail-review">
                   <p>
@@ -48,15 +54,11 @@ class Accommodations extends React.Component {
             <Row className="detail-description">
               <h2>Description</h2>
               <p>
-                Pinecrest Campground offers four group campsites that provide a
-                nice, quiet and relaxing atmosphere. This is a wonderful
-                location for a group to start their south Florida adventure.
-              </p>
-              <p>
-                This campground is for primitive group use camping only. Picnic
-                tables and fire rings are available at each site. There are no
-                covered picnic areas, toilets, hookups, or water. Minimal shade
-                is provided by surrounding trees.
+                On March 1, 1872, Yellowstone became the first national park for
+                all to enjoy the unique hydrothermal and geologic wonders. From
+                early September to mid-October, a new energy emerges in
+                Yellowstone as bull elk bugle and battle each other during the
+                fall mating season.
               </p>
             </Row>
             <Row className="detail-title-bar"></Row>
@@ -218,8 +220,7 @@ class Accommodations extends React.Component {
                     <Row>
                       <p>
                         There are many interesting hiking trails in the
-                        surrounding area. Sovereign Trails is a popular one to
-                        try.{' '}
+                        surrounding area. Mt. Washburn is a popular one to try.{' '}
                       </p>
                     </Row>
                   </div>
@@ -235,9 +236,10 @@ class Accommodations extends React.Component {
                     </Row>
                     <Row>
                       <p>
-                        Fishing near the Clextonia River is a fun pastime to do
-                        during a lazy afternoon. We have rods for rent and bait
-                        for purchase.
+                        Yellowstone Lake is the largest body of water in
+                        Yellowstone National Park, as well as the largest lake
+                        above 7,000 feet in North America. The lake is home to
+                        native Cutthroat Trout and non-native Lake Trout.
                       </p>
                     </Row>
                   </div>
@@ -266,9 +268,9 @@ class Accommodations extends React.Component {
                     </Row>
                     <Row>
                       <p>
-                        Had such a great time here. Mandala Cabin is for sure
-                        the best place in Arches National Park. Will be back
-                        next year.
+                        Yellowstone National Park should be a bucket list trip
+                        for anyone who loves nature, amazing landscape and
+                        wildlife.
                       </p>
                     </Row>
                   </div>
