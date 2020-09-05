@@ -12,7 +12,7 @@ const NavigationBar = () => {
     >
       <Nav.Item>
         <Dropdown drop="down">
-          <Dropdown.Toggle variant="outline-light">&#9776;</Dropdown.Toggle>
+          <Dropdown.Toggle variant="outline-dark">&#9776;</Dropdown.Toggle>
           <Dropdown.Menu>
             <Dropdown.ItemText>Welcome!</Dropdown.ItemText>
             <Dropdown.Divider />
