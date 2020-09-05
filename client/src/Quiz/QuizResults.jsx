@@ -10,11 +10,11 @@ const QuizResults = () => {
       <NavigationBar />
       <div id="results">
         <h2>The Top 3 National Parks for you!</h2>
-        <p>Discover these National Parks for you!</p>
+        <p>Discover these National Parks for your next camping trip!</p>
         <div>
           <img src="/images/Arches.png"></img>
-          <img src="/images/Arches.png"></img>
-          <img src="/images/Arches.png"></img>
+          <img src="/images/JoshuaTree.png"></img>
+          <img src="/images/MesaVerde.png"></img>
         </div>
         <Button as={Link} id="parks" to="/explore">
           Explore all Parks
