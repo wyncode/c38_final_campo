@@ -4,9 +4,11 @@ import StripeCheckoutButton from '../components/StripeCheckout';
 import './Pay.css';
 
 const Stripe = () => {
-  const pricePerNight = 90;
+  const pricePerNight = 76;
   const numberOfNights = 3;
-  const totalPrice = 58;
+  const price = pricePerNight * numberOfNights;
+  const taxes = 40;
+  const totalPrice = price + taxes;
 
   return (
     <div id="paypage">
@@ -17,6 +19,7 @@ const Stripe = () => {
           <div id="parkDetails">
             <img
               src="/images/Yellowstone.jpg"
+              alt="Yellowstone"
               height="134px"
               width="150px"
             ></img>
@@ -29,33 +32,31 @@ const Stripe = () => {
           <div></div>
           <div className="borders right">
             <h4>Check in</h4>
-            <p>Jan 1, 2021</p>
+            <p>Sept 21, 2020</p>
           </div>
           <div className="borders">
             <h4>Check out</h4>
-            <p>Jan 4, 2021</p>
+            <p>Sept 24, 2020</p>
           </div>
           <h4>Contact Info</h4>
           <p>Stefani Kahle</p>
           <p>stefanikahle@gmail.com</p>
-          <p>555-435-3295</p>
 
           <h4>Payment details</h4>
-          <h6>
-            ${pricePerNight} x {numberOfNights} nights
-          </h6>
 
           <div id="fees" className="pt-2">
-            <span>Park Fees</span>
-            <span>$200.00</span>
+            <span>
+              ${pricePerNight} x {numberOfNights} nights
+            </span>
+            <span>${price}</span>
           </div>
           <div id="feesborder">
             <span>Taxes</span>
-            <span>$40.00</span>
+            <span>${taxes}</span>
           </div>
           <div id="fees">
             <span>Total</span>
-            <span>$240.00</span>
+            <span>${totalPrice}</span>
           </div>
           <StripeCheckoutButton price={totalPrice} />
         </header>
