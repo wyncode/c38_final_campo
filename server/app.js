@@ -1,4 +1,3 @@
-
 require('./db/config');
 
 const path = require('path');
@@ -34,7 +33,6 @@ app.set('views', path.join(__dirname, 'views'));
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
 app.use(cors());
-
 
 app.options('*', cors());
 // app.options('/api/v1/tours/:id', cors());
