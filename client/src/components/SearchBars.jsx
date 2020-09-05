@@ -32,7 +32,7 @@ const SearchBars = () => {
             {inputValue &&
               inputValue.map((item) => (
                 <Link
-                  to="./Accommodations"
+                  to="/accommodations"
                   style={{
                     backgroundColor: `white`,
                     width: `500px`,
