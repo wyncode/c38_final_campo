@@ -1,0 +1,46 @@
+.background {
+  background-color: #efeae5;
+  background-image: url(/images/CampoMountainRange.png);
+  background-position-x: right;
+  background-position-y: bottom;
+  background-repeat: no-repeat;
+  width: 665px;
+  height: 900px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#quizpane {
+  width: 600px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+#quizselect {
+  background-color: white;
+  padding: 20px;
+  width: 152px;
+  height: 120px;
+  margin: 8px;
+  box-shadow: 2px 4px #b1b1b1;
+  border: 1px solid white;
+  border-radius: 4px;
+  color: black;
+}
+
+#quizselect:hover {
+  background-color: rgba(236, 105, 92, 0.29);
+}
+
+#redo {
+  color: #747474;
+}
+
+#redo:hover {
+  color: white;
+  text-decoration: none;
+}
