@@ -21,6 +21,7 @@ const SignUp = ({ history }) => {
       .then((response) => {
         sessionStorage.setItem('user', response.data);
         setCurrentUser(response.data);
+
         history.push('/');
       })
       .catch((error) => swal('Error', 'Please check the inputs', 'warning'));
