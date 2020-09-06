@@ -60,6 +60,13 @@ app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
 
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, '../client/build')));
+
+}
+
+
 // Data sanitization against NoSQL query injection
 app.use(mongoSanitize());
 
@@ -98,9 +105,6 @@ app.use('/api/bookings', bookingRouter);
 app.use(globalErrorHandler);
 
 if (process.env.NODE_ENV === 'production') {
-  // Serve any static files
-  app.use(express.static(path.join(__dirname, '../client/build')));
-
   app.get('*', (request, response) => {
     response.sendFile(path.join(__dirname, '../client/build', 'index.html'));
   });
