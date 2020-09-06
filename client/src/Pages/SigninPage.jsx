@@ -34,7 +34,7 @@ const LoginPage = () => {
             />
           </Form.Group>
           <Form.Group className="d-flex justify-content-center">
-            <Button id="buttons" type="submit">
+            <Button id="buttons" type="submit" as={Link} to="/">
               <span>Sign In</span>
             </Button>
           </Form.Group>
