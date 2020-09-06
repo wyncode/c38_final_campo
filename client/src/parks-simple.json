@@ -12,7 +12,11 @@
       "description": "Covering most of Mount Desert Island and other coastal islands, Acadia features the tallest mountain on the Atlantic coast of the United States, granite peaks, ocean shoreline, woodlands, and lakes. There are freshwater, estuary, forest, and intertidal habitats.",
       "imageCover": "park-1-cover.jpg",
       "images": ["tour-1-1.jpg", "tour-1-2.jpg", "tour-1-3.jpg"],
-      "startDates": [""]
+      "startDates": [""],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-68.2733, 44.3386]
+      }
     },
     {
       "id": 1,
@@ -27,7 +31,12 @@
       "description": "The southernmost national park is on three Samoan islands and protects coral reefs, rainforests, volcanic mountains, and white beaches. The area is also home to flying foxes, brown boobies, sea turtles, and 900 species of fish.",
       "imageCover": "tour-2-cover.jpg",
       "images": ["tour-2-1.jpg", "tour-2-2.jpg", "tour-2-3.jpg"],
-      "startDates": ["2021-06-19,10:00", "2021-07-20,10:00", "2021-08-18,10:00"]
+      "startDates": ["2021-06-19,10:00", "2021-07-20,10:00", "2021-08-18,10:00"],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-170.68, -14.25
+        ]
+      }
     },
     {
       "id": 2,
@@ -42,7 +51,14 @@
       "description": "Millions of years of erosion have created these structures located in a desert climate where the arid ground has life-sustaining biological soil crusts and potholes that serve as natural water-collecting basins.",
       "imageCover": "tour-3-cover.jpg",
       "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-      "startDates": [""]
+      "startDates": [""],
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -109.57,
+          38.68
+        ]
+      }
     },
     {
         "id": 3,
@@ -57,7 +73,14 @@
         "description": "The White River Badlands contain the largest assemblage of known late Eocene and Oligocene mammal fossils.[17] The wildlife includes bison, bighorn sheep, black-footed ferrets, and prairie dogs.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -102.50,
+            43.75
+          ]
+        }
       },    
       {
         "id": 4,
@@ -72,7 +95,14 @@
         "description": "Big Bend National Park is an American national park located in West Texas, bordering Mexico. The park has national significance as the largest protected area of Chihuahuan Desert topography and ecology in the United States. The park protects more than 1,200 species of plants, more than 450 species of birds, 56 species of reptiles, and 75 species of mammals.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -103.25,
+            29.25
+          ]
+        }
       },    
       {
         "id": 5,
@@ -87,7 +117,14 @@
         "description": "Located in Biscayne Bay, this park at the north end of the Florida Keys has four interrelated marine ecosystems: mangrove forest, the Bay, the Keys, and coral reefs. Threatened animals include the West Indian manatee, American crocodile, various sea turtles, and peregrine falcon.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -80.08,
+            25.65
+          ]
+        }
       },    
       {
         "id": 6,
@@ -102,7 +139,14 @@
         "description": "The canyon features some of the steepest cliffs and oldest rock in North America, and is a popular site for river rafting and rock climbing. The deep, narrow canyon is composed of gneiss and schist which appears black when in shadow.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -107.72,
+            38.57
+          ]
+        }
       },    
       {
         "id": 7,
@@ -117,7 +161,14 @@
         "description": "Bryce Canyon is a geological amphitheater on the Paunsaugunt Plateau with hundreds of tall, multicolored sandstone hoodoos formed by erosion. The region was originally settled by Native Americans and later by Mormon pioneers.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -68.2733,
+            44.3386
+          ]
+        }
       },    
       {
         "id": 8,
@@ -132,7 +183,14 @@
         "description": "This landscape was eroded into a maze of canyons, buttes, and mesas by the combined efforts of the Colorado River, Green River, and their tributaries, which divide the park into three districts. The park also contains rock pinnacles and arches, as well as artifacts from Ancient Pueblo peoples.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -109.93,
+            38.2
+          ]
+        }
       },    
       {
         "id": 9,
@@ -147,7 +205,14 @@
         "description": "The park's Waterpocket Fold is a 100-mile (160 km) monocline that exhibits the earth's diverse geologic layers. Other natural features include monoliths, cliffs, and sandstone domes shaped like the United States Capitol.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -111.17,
+            38.2
+          ]
+        }
       },    
       {
         "id": 10,
@@ -162,7 +227,14 @@
         "description": "The Big Room is almost 4,000 feet (1,200 m) long, and the caves are home to over 400,000 Mexican free-tailed bats and sixteen other species. Above ground are the Chihuahuan Desert and Rattlesnake Springs.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -104.44,
+            32.17
+          ]
+        }
       },    
       {
         "id": 11,
@@ -177,7 +249,14 @@
         "description": "The islands have a unique Mediterranean ecosystem originally settled by the Chumash people. They are home to over 2,000 species of land plants and animals, and 145 are unique to them, including the island fox.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.42,
+            34.01
+          ]
+        }
       },    
       {
         "id": 12,
@@ -192,7 +271,14 @@
         "description": "Some of the trees are the tallest in the eastern United States. An elevated walkway called the Boardwalk Loop guides visitors through the swamp.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -80.78,
+            33.78
+          ]
+        }
       },
       {
         "id": 13,
@@ -207,7 +293,14 @@
         "description": "The lake is the deepest in the United States and is noted for its vivid blue color and water clarity. Wizard Island and the Phantom Ship are more recent volcanic formations within the caldera. As the lake has no inlets or outlets, the lake is replenished only by precipitation.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -122.1,
+            42.94
+          ]
+        }
       },
       {
         "id": 14,
@@ -222,7 +315,14 @@
         "description": "The Ohio and Erie Canal Towpath Trail follows the Ohio and Erie Canal, where mules towed canal boats. The park has numerous historic homes, bridges, and structures,[33] and also offers a scenic train ride.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -81.55,
+            41.24
+          ]
+        }
       },
       {
         "id": 15,
@@ -237,7 +337,14 @@
         "description": "The park protects Badwater Basin and its vast salt flats located at the lowest elevation in North America, −282 ft (−86 m).[35] The park also protects canyons, badlands, sand dunes, mountain ranges, historic mines, springs, and more than 1000 species of plants which grow in this geologic graben.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -116.82,
+            36.24
+          ]
+        }
       },
       {
         "id": 16,
@@ -252,7 +359,14 @@
         "description": "Denali is serviced by a single road leading to Wonder Lake. Denali and other peaks of the Alaska Range are covered with long glaciers and boreal forest. Wildlife includes grizzly bears, Dall sheep, Porcupine caribou, and wolves.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -150.50,
+            63.33
+          ]
+        }
       },
       {
         "id": 17,
@@ -267,7 +381,14 @@
         "description": "It is the site of Fort Jefferson, a Civil War-era fort that is the largest masonry structure in the Western Hemisphere. The park is home to undisturbed coral reefs and shipwrecks, and is only accessible by plane or boat.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -82.87,
+            24.63
+          ]
+        }
       },
       {
         "id": 18,
@@ -282,7 +403,14 @@
         "description": "This mangrove and tropical rainforest ecosystem and marine estuary is home to 36 protected species, including the Florida panther, American crocodile, and West Indian manatee. Some areas have been drained and developed; restoration projects aim to restore the ecology.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -80.93,
+            25.32
+          ]
+        }
       },
       {
         "id": 19,
@@ -297,7 +425,14 @@
         "description": " This park protects an expanse of pure wilderness in Alaska's Brooks Range and has no park facilities. The land is home to Alaska Natives who have relied on the land and caribou for 11,000 years.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -153.30,
+            67.78
+          ]
+        }
       },
       {
         "id": 20,
@@ -312,7 +447,14 @@
         "description": "Built to commemorate the Lewis and Clark Expedition, initiated by Thomas Jefferson, and the subsequent westward expansion of the country. The nearby Old Courthouse, across a greenway to the west of the arch, was the first site of the Dred Scott case about slavery. A museum, located in the underground visitor center below the arch, describes the arch's construction and the country's westward expansion.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -90.19,
+            38.63
+          ]
+        }
       },
       {
         "id": 21,
@@ -327,7 +469,14 @@
         "description": "There are historic hotels and a landmark road called the Going-to-the-Sun Road in this region of rapidly receding glaciers.[47] The local mountains, formed by an overthrust, expose Paleozoic fossils including trilobites, mollusks, giant ferns and dinosaurs.[48] (WHS)[49] (BR)[50] The park is also home to Triple Divide Peak, which forms the boundary between the watersheds of the Atlantic, Pacific, and Arctic Oceans.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -114.00,
+            48.80
+          ]
+        }
       },
       {
         "id": 22,
@@ -342,7 +491,14 @@
         "description": "",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -137.00,
+            58.50
+          ]
+        }
       },
       {
         "id": 23,
@@ -357,7 +513,14 @@
         "description": "Millions of years of erosion have exposed the multicolored layers of the Colorado Plateau in mesas and canyon walls, visible from both the north and south rims, or from a number of trails that descend into the canyon itself.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -112.14,
+            36.06
+          ]
+        }
       },
       {
         "id": 24,
@@ -372,7 +535,14 @@
         "description": "",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -100.80,
+            43.73
+          ]
+        }
       },
       {
         "id": 25,
@@ -387,7 +557,14 @@
         "description": " Great Basin National Park contains 5,000-year-old bristlecone pines, a rock glacier, and the limestone Lehman Caves. Due to its remote location, the park has some of the country's darkest night skies. Wildlife includes the Townsend's big-eared bat, pronghorn, and Bonneville cutthroat trout.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -114.30,
+            38.98
+          ]
+        }
       },
       {
         "id": 26,
@@ -402,7 +579,14 @@
         "description": "Abutting a variety of grasslands, shrublands, and wetlands, the park also has alpine lakes, six 13,000-foot mountains, and old-growth forests.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -105.51,
+            37.73
+          ]
+        }
       },
       {
         "id": 27,
@@ -417,7 +601,14 @@
         "description": "Hiking is the park's main attraction, with over 800 miles (1,300 km) of trails, including 70 miles (110 km) of the Appalachian Trail. Other activities include fishing, horseback riding, and touring nearly 80 historic structures.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -83.53,
+            35.68
+          ]
+        }
       },
       {
         "id": 28,
@@ -432,7 +623,14 @@
         "description": "Guadalupe Mountains National Park is an American national park in the Guadalupe Mountains, east of El Paso, Texas. The mountain range includes Guadalupe Peak, the highest point in Texas at 8,749 feet (2,667 m), and El Capitan used as a landmark by travelers on the route later followed by the Butterfield Overland Mail stagecoach line.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -104.87,
+            31.92
+          ]
+        }
       },
       {
         "id": 29,
@@ -447,7 +645,14 @@
         "description": "The Haleakalā volcano on Maui features a very large crater with numerous cinder cones, Hosmer's Grove of alien trees, the Kipahulu section's scenic pools of freshwater fish, and the native Hawaiian goose.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -156.17,
+            20.72
+          ]
+        }
       },
       {
         "id": 30,
@@ -462,7 +667,14 @@
         "description": "Hawaiʻi Volcanoes National Park, established on August 1, 1916, as Hawaii National Park is an American national park located in the U.S. state of Hawaii on the island of Hawaii. The park encompasses two active volcanoes: Kīlauea, one of the world's most active volcanoes, and Mauna Loa, the world's most massive shield volcano.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -155.20,
+            19.38
+          ]
+        }
       },
       {
         "id": 31,
@@ -477,7 +689,14 @@
         "description": "Natural hot springs flow out of the Ouachita Mountains, providing opportunities for relaxation in a historic setting. Bathhouse Row preserves numerous examples of 19th-century architecture.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -93.05,
+            34.51
+          ]
+        }
       },
       {
         "id": 32,
@@ -492,7 +711,14 @@
         "description": "",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -87.0524,
+            41.6533
+          ]
+        }
       },
       {
         "id": 33,
@@ -507,7 +733,14 @@
         "description": "The largest island in Lake Superior is a place of isolation and wilderness. Along with its many shipwrecks, waterways, and hiking trails, the park also includes over 400 smaller islands within 4.5 miles (7.2 km) of its shores. There are only 20 mammal species on the entire island, though the relationship between its wolf and moose populations is especially unique.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -88.55,
+            48.10
+          ]
+        }
       },
       {
         "id": 34,
@@ -522,7 +755,14 @@
         "description": "Covering large areas of the Colorado and Mojave Deserts and the Little San Bernardino Mountains, this desert landscape is populated by vast stands of Joshua trees.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -115.90,
+            33.79
+          ]
+        }
       },
       {
         "id": 35,
@@ -537,7 +777,14 @@
         "description": "",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -155.00,
+            58.50
+          ]
+        }
       },
       {
         "id": 36,
@@ -552,7 +799,14 @@
         "description": "The only area accessible to the public by road is Exit Glacier; the rest must be viewed or reached from boat tours.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -149.65,
+            59.92
+          ]
+        }
       },
       {
         "id": 37,
@@ -567,7 +821,14 @@
         "description": "This park also features part of the Kings River, sculptor of the dramatic granite canyon that is its namesake, and the San Joaquin River, as well as Boyden Cave.[75] Although Kings Canyon National Park was designated as such in 1940, it subsumed General Grant National Park, which had been established on October 1, 1890 as the United States' fourth national park.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -118.55,
+            36.80
+          ]
+        }
       },
       {
         "id": 38,
@@ -582,7 +843,14 @@
         "description": "Created by glaciers, the Great Kobuk, Little Kobuk, and Hunt River Sand Dunes can reach 100 feet (30 m) high and 100 °F (38 °C), and they are the largest dunes in the Arctic. Twice a year, half a million caribou migrate through the dunes and across river bluffs that expose well-preserved ice age fossils.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -159.28,
+            67.55
+          ]
+        }
       },
       {
         "id": 39,
@@ -597,7 +865,14 @@
         "description": "Lake Clark National Park and Preserve is an American national park in southwest Alaska, about 100 miles (160 km) southwest of Anchorage. The park was first proclaimed a national monument in 1978, then established as a national park and preserve in 1980 by the Alaska National Interest Lands Conservation Act.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -153.42,
+            60.97
+          ]
+        }
       },
       {
         "id": 40,
@@ -612,7 +887,14 @@
         "description": "Though Lassen itself last erupted in 1915, most of the rest of the park is continuously active. Numerous hydrothermal features, including fumaroles, boiling pools, and bubbling mud pots, are heated by molten rock from beneath the peak.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.51,
+            40.49
+          ]
+        }
       },
       {
         "id": 41,
@@ -627,7 +909,14 @@
         "description": "Subterranean wildlife includes eight bat species, Kentucky cave shrimp, Northern cavefish, and cave salamanders. Above ground, the park provides recreation on the Green River, 70 miles of hiking trails, and plenty of sinkholes and springs.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -86.10,
+            37.18
+          ]
+        }
       },
       {
         "id": 42,
@@ -642,7 +931,14 @@
         "description": "Cliff dwellings built in the 12th and 13th centuries include Cliff Palace, which has 150 rooms and 23 kivas, and the Balcony House, with its many passages and tunnels.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -108.49,
+            37.18
+          ]
+        }
       },
       {
         "id": 43,
@@ -657,7 +953,14 @@
         "description": "The mountain is popular for climbing, and more than half of the park is covered by subalpine and alpine forests and meadows seasonally in bloom with wildflowers. Paradise on the south slope is the snowiest place on Earth where snowfall is measured regularly.[88] The Longmire visitor center is the start of the Wonderland Trail, which encircles the mountain.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.75,
+            46.85
+          ]
+        }
       },
       {
         "id": 44,
@@ -672,7 +975,14 @@
         "description": "",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.20,
+            48.70
+          ]
+        }
       },
       {
         "id": 45,
@@ -687,7 +997,14 @@
         "description": "The Hoh Rainforest and Quinault Rainforest are the wettest area in the contiguous United States, with the Hoh receiving an average of almost 12 ft (3.7 m) of rain every year.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -123.50,
+            47.97
+          ]
+        }
       },
       {
         "id": 46,
@@ -702,7 +1019,14 @@
         "description": "The surrounding Painted Desert features eroded cliffs of red-hued volcanic rock called bentonite. Dinosaur fossils and over 350 Native American sites are also protected in this park.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -109.78,
+            35.07
+          ]
+        }
       },
       {
         "id": 47,
@@ -717,7 +1041,14 @@
         "description": "The park's massive black and gold monoliths of andesite and rhyolite are a popular destination for rock climbers. Hikers have access to trails crossing the Coast Range wilderness. The park is home to the endangered California condor (Gymnogyps californianus) and one of the few locations in the world where these extremely rare birds can be seen in the wild.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -121.16,
+            36.48
+          ]
+        }
       },
       {
         "id": 48,
@@ -732,7 +1063,14 @@
         "description": "There are three large river systems in this very seismically active area, and 37 miles (60 km) of protected coastline reveal tide pools and seastacks. The prairie, estuary, coast, river, and forest ecosystems contain a wide variety of animal and plant species.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -124.00,
+            41.30
+          ]
+        }
       },
       {
         "id": 49,
@@ -747,7 +1085,14 @@
         "description": "",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -105.58,
+            40.40
+          ]
+        }
       },
       {
         "id": 50,
@@ -762,7 +1107,14 @@
         "description": "",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -110.50,
+            32.25
+          ]
+        }
       },
       {
         "id": 51,
@@ -777,7 +1129,14 @@
         "description": "The Skyline Drive and Appalachian Trail run the entire length of this narrow park, along with more than 500 miles (800 km) of hiking trails passing scenic overlooks and cataracts of the Shenandoah River.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -118.68,
+            36.43
+          ]
+        }
       },
       {
         "id": 52,
@@ -792,7 +1151,14 @@
         "description": "Besides Roosevelt's historic cabin, there are numerous scenic drives and backcountry hiking opportunities. Wildlife includes American bison, pronghorn, bighorn sheep, and wild horses.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -103.45,
+            46.97
+          ]
+        }
       },
       {
         "id": 53,
@@ -807,7 +1173,14 @@
         "description": "Surrounding the pristine beaches are mangrove forests, seagrass beds, and coral reefs.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -64.73,
+            18.33
+          ]
+        }
       },
       {
         "id": 54,
@@ -822,7 +1195,14 @@
         "description": "The park also preserves a history populated by Ojibwe Native Americans, French fur traders called voyageurs, and gold miners. Formed by glaciers, the region features tall bluffs, rock gardens, islands, bays, and several historic buildings.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -92.88,
+            48.50
+          ]
+        }
       },
       {
         "id": 55,
@@ -837,7 +1217,14 @@
         "description": "Located in the mountain-ringed Tularosa Basin, White Sands consists of the southern part of a 275-square-mile (710 km2) field of white sand dunes composed of gypsum crystals—the world's largest gypsum dunefield",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -106.17,
+            32.78
+          ]
+        }
       },    
       {
         "id": 56,
@@ -852,7 +1239,14 @@
         "description": "The cave is one of the longest and most complex caves in the world. Above ground is a mixed-grass prairie with animals such as bison, black-footed ferrets, and prairie dogs, and ponderosa pine forests that are home to cougars and elk.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -103.48,
+            43.57
+          ]
+        }
       },
       {
         "id": 57,
@@ -867,7 +1261,14 @@
         "description": "Located in the mountain-ringed Tularosa Basin, White Sands consists of the southern part of a 275-square-mile (710 km2) field of white sand dunes composed of gypsum crystals—the world's largest gypsum dunefield",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -142.00,
+            61.00
+          ]
+        }
       },
       {
         "id": 58,
@@ -882,22 +1283,14 @@
         "description": "The yellow-hued Grand Canyon of the Yellowstone River contains several high waterfalls, and four mountain ranges traverse the park. More than 60 mammal species including timber wolves, grizzly bears, black bears, lynxes, bison, and elk, make this park one of the best wildlife viewing spots in the country.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
-      },
-      {
-        "id": 59,
-        "name": "White Sands National Park",
-        "duration": 4,
-        "maxGroupSize": 10,
-        "difficulty": "difficult",
-        "ratingsAverage": 4.5,
-        "ratingsQuantity": 13,
-        "price": 97,
-        "summary": "White Sands National Park is an American national park located in the state of New Mexico on U.S. Route 70 approximately 15 miles (24 km) southwest of Alamogordo and 52 miles (84 km) northeast of Las Cruces, in western Otero County and northeastern Doña Ana County.",
-        "description": "Located in the mountain-ringed Tularosa Basin, White Sands consists of the southern part of a 275-square-mile (710 km2) field of white sand dunes composed of gypsum crystals—the world's largest gypsum dunefield",
-        "imageCover": "tour-3-cover.jpg",
-        "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -110.50,
+            44.60
+          ]
+        }
       },
       {
         "id": 60,
@@ -912,7 +1305,14 @@
         "description": "Half Dome and El Capitan rise from the park's centerpiece, the glacier-carved Yosemite Valley, and from its vertical walls drop Yosemite Falls, one of North America's tallest waterfalls at 2,425 feet (739 m) high.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -119.50,
+            37.83
+          ]
+        }
       },
       {
         "id": 61,
@@ -927,6 +1327,13 @@
         "description": "This park contains sandstone features such as mesas, rock towers, and canyons, including the Virgin River Narrows. The various sandstone formations and the forks of the Virgin River create a wilderness divided into four ecosystems: desert, riparian, woodland, and coniferous forest.",
         "imageCover": "tour-3-cover.jpg",
         "images": ["tour-3-1.jpg", "tour-3-2.jpg", "tour-3-3.jpg"],
-        "startDates": [""]
+        "startDates": [""],
+        "geometry": {
+          "type": "Point",
+          "coordinates": [
+            -113.05,
+            37.30
+          ]
+        }
       }
   ]

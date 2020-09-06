@@ -11,7 +11,7 @@ const ResetPassword = () => {
     event.preventDefault();
     const form = event.target;
     axios
-      .get(`/api/password?email=${email}`)
+      .get(`/api/v1/resetPassword?email=${email}`)
       .then((res) => {
         console.log(res);
         form.reset();

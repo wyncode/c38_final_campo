@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { Container } from 'react-bootstrap';
 import ReactMapGL, { Marker, Popup } from 'react-map-gl';
 import NavigationBar from '../components/NavigationBar';
+import data from '../parks-simple.json'
+
 
 const ExplorePage = () => {
   const [viewport, setViewport] = useState({
@@ -13,6 +15,11 @@ const ExplorePage = () => {
   });
 
   const [selectedPark, setSelectedPark] = useState(null);
+
+  console.log(data.geometry)
+  
+
+
 
   useEffect(() => {
     const listener = (e) => {
@@ -44,6 +51,7 @@ const ExplorePage = () => {
                 e.preventDefault(setSelectedPark());
               }}
             ></button>
+            
           </Marker>
           {selectedPark ? (
             <Popup
@@ -53,10 +61,7 @@ const ExplorePage = () => {
                 setSelectedPark(null);
               }}
             >
-              <div>
-                <h2>NationalPark</h2>
-                <p> Smokey Mountains</p>
-              </div>
+           
             </Popup>
           ) : null}
         </ReactMapGL>

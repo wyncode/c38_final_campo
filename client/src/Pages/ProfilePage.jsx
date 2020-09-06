@@ -42,7 +42,7 @@ const Profile = ({ history }) => {
     try {
       await axios({
         method: 'DELETE',
-        url: '/api/users/me',
+        url: '/api/v1/users/deleteMe',
         withCredentials: true
       });
       setLoading(false);

@@ -10,7 +10,7 @@ const Logout = () => {
 
   const handleSignOut = () => {
     axios
-      .post('/api/users/logout', { withCredentials: true })
+      .post('/api/v1/users/logout', { withCredentials: true })
       .then(() => {
         setCurrentUser(null);
         sessionStorage.removeItem('user');

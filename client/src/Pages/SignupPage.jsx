@@ -17,7 +17,7 @@ const SignUp = ({ history }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post('/api/users/', formData)
+      .post('/api/v1/users/signup', formData)
       .then((response) => {
         sessionStorage.setItem('user', response.data);
         setCurrentUser(response.data);
@@ -55,6 +55,15 @@ const SignUp = ({ history }) => {
           </Form.Group>
           <Form.Group>
             <Form.Label htmlFor="password">Password</Form.Label>
+            <Form.Control
+              id="password"
+              type="password"
+              placeholder="Enter Password"
+              name="password"
+              onChange={handleChange}
+            />
+            
+            <Form.Label htmlFor="password">Password Confirm</Form.Label>
             <Form.Control
               id="password"
               type="password"

@@ -22,7 +22,7 @@ mongoose
   .then(() => console.log('DB connection successful!!!!!!!!'));
 
 // READ JSON FILE
-const parks = JSON.parse(fs.readFileSync(`${__dirname}/parks.json`, 'utf-8'));
+const parks = JSON.parse(fs.readFileSync(`${__dirname}/parks-simple.json`, 'utf-8'));
 const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
 const reviews = JSON.parse(
   fs.readFileSync(`${__dirname}/reviews.json`, 'utf-8')

@@ -7,7 +7,6 @@ const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 const Email = require('../utils/email');
 
-
 const signToken = id => {
   return jwt.sign({ id }, process.env.JWT_SECRET, {
     expiresIn: process.env.JWT_EXPIRES_IN
@@ -45,22 +44,15 @@ exports.signup = catchAsync(async (req, res, next) => {
     passwordConfirm: req.body.passwordConfirm
   });
 
-
-  // const url = `${req.protocol}://${req.get('host')}/me`;
-  // // console.log(url);
-  // await new Email(newUser, url)
-//attach above to send email pug.~~  await new Email(newUser, url).sendWelcome();
-  //.sendWelcome();
-
   const url = `${req.protocol}://${req.get('host')}/me`;
-//  console.log(url)
-  await new Email(newUser, url).sendWelcome();
-
+  // console.log(url);
+  await new Email(newUser, url) 
+  // .sendWelcome();
 
   createSendToken(newUser, 201, req, res);
 });
 
-exports.login = catchAsync(async (req, res, next) => {
+exports.login = (async (req, res, next) => {
   const { email, password } = req.body;
 
   // 1) Check if email and password exist
