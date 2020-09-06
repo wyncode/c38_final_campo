@@ -1,4 +1,20 @@
-# Final Project
+# CAMPO
+
+A web application used to explore and book national parks for camping trips.
+
+## Further Devlopment/Reach Goals:
+
+We hope to build out more features to offer support to our users while on their camping trips.
+These include:
+
+- The ability to receive alerts about emergencies within their camping area
+- Implementing more extensive articles written about camping, gear, and nature
+- The option to book tours through private operators
+
+## The Team
+
+- UX/UI Designers: Christina Benedict & Priscilla Gettins
+- Web Developers: Andrew Garcia, Astrid Massuh, Andrew Reardigan, & Priscilla Standard
 
 ## Setup
 
@@ -24,3 +40,16 @@ NOTE: Heroku specifically runs `npm start`, so don't remove that from your packa
 - `heroku create your-app-name`
 - `heroku config:set MONGODB_URL=<insertYourAtlasDbUri>`
 - `git push heroku master`
+
+## Packages and Libraries used
+
+- React
+- React-Bootstrap
+- React-Router-DOM
+- Sweet Alert
+- React-dates
+- Stripe
+- Axios
+- Mongo DB
+- Express
+- Mapbox
