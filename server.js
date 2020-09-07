@@ -1,4 +1,3 @@
-
 if (process.env.NODE_ENV !== 'production') require('dotenv').config();
 
 if (process.env.NODE_ENV === 'production') {
@@ -9,11 +8,11 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-
 const app = require('./server/app'),
-  PORT = process.env.PORT || 8080;
-
+  PORT = process.env.PORT || 8000;
 
 app.listen(PORT, () => {
-  console.log(`Express server is running in ${process.env.NODE_ENV} mode on port: ${PORT}`);
+  console.log(
+    `Express server is running in ${process.env.NODE_ENV} mode on port: ${PORT}`
+  );
 });

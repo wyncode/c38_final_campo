@@ -1,4 +1,3 @@
-
 require('./db/config');
 
 const path = require('path');
@@ -22,7 +21,7 @@ const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const bookingController = require('./controllers/bookingController');
 const viewRouter = require('./routes/viewRoutes');
-
+const parksAPIRouter = require('./routes/parksAPI');
 // Start express app
 const app = express();
 
@@ -34,7 +33,6 @@ app.set('views', path.join(__dirname, 'views'));
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
 app.use(cors());
-
 
 app.options('*', cors());
 // app.options('/api/v1/tours/:id', cors());
@@ -101,6 +99,7 @@ app.use((req, res, next) => {
 
 // 3) ROUTES
 app.use('/', viewRouter);
+app.use('/api/v1', parksAPIRouter);
 app.use('/api/v1/parks', parkRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { AppContextProvider } from './context/AppContext';
 import ContextDemo from './components/ContextDemo';
 import Accommodations from './components/Accommodations';
+import CampsiteCard from './components/CampsiteCard';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SigninPage from './Pages/SigninPage';
 import HomePage from './Pages/HomePage';
@@ -30,7 +31,16 @@ const App = () => {
       <Router>
         <Switch>
           <Route exact path="/" component={HomePage} />
-          <Route exact path="/accommodations" component={Accommodations} />
+          <Route
+            exact
+            path="/camp-facilities/:location"
+            component={CampsiteCard}
+          />
+          <Route
+            exact
+            path="/accommodations/:campsite"
+            component={Accommodations}
+          />
           <Route exact path="/signin" component={SigninPage} />
           <Route exact path="/signup" component={SignupPage} />
           <Route exact path="/reset-password" component={ResetPasswordPage} />
@@ -38,7 +48,6 @@ const App = () => {
           <Route exact path="/checkout" component={StripePay} />
           <Route exact path="/quiz" component={Quiz} />
           <Route exact path="/explore" component={ExplorePage} />
-          <Route exact path="/accommodations" component={Accommodations} />
         </Switch>
       </Router>
     </AppContextProvider>

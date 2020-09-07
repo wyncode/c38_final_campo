@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Carousel, Button, Container, Row, Col, Image } from 'react-bootstrap';
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
+import NavigationBar from './NavigationBar';
 import 'react-dates/lib/css/_datepicker.css';
 import '../App.css';
-import NavigationBar from './NavigationBar';
-import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 class Accommodations extends React.Component {
@@ -14,19 +13,92 @@ class Accommodations extends React.Component {
     this.state = {
       startDate: null,
       endDate: null,
-      facilityID: 'test'
+      facilityID: this.props.match.params.campsite,
+      attributes: [],
+      activities: [],
+      images: []
     };
+
+    this.collectorImages = this.collectorImages.bind(this);
+  }
+  async componentDidMount() {
+    const response = await fetch(
+      `http://localhost:8000/api/v1/accommodations/${this.state.facilityID}`
+    );
+    const data = await response.json();
+
+    this.setState({
+      title: data.Title,
+      overview: data.Overview,
+      recreation: data.Recreation,
+      facilities: data.Facilities,
+      natural_features: data.Natural_Features,
+      nearby_attractions: data.Nearby_Attractions,
+      directions: data.Directions
+    });
+    data.Attributes.map((item) => {
+      this.state.attributes.push(item);
+    });
+    this.state.activities = data.Activities;
+    this.state.images = data.Images;
   }
 
+  async collectorImages() {
+    let images;
+    if (this.state.images.length) {
+      console.log(this.state.images);
+      images = await this.state.images.map((item) => (
+        <Carousel.Item>
+          <Image src={item} />
+        </Carousel.Item>
+      ));
+    }
+
+    return images;
+  }
   render() {
+    let images = this.collectorImages();
+    let amenities;
+    let activities;
+    console.log(this.state.images);
+    if (this.state.images.length > 0) {
+      console.log(this.state.images);
+      images = this.state.images.map((item) => (
+        <Carousel.Item>
+          <Image src={item} />
+        </Carousel.Item>
+      ));
+    }
+    if (this.state.attributes.length > 0) {
+      console.log(this.state.attributes);
+      amenities = this.state.attributes.map((item) => <li>{item}</li>);
+    }
+    if (this.state.activities.length > 0) {
+      activities = this.state.activities.map((item) => (
+        <div className="detail-campsite-card-outter">
+          <div className="detail-activities-card">
+            {/* <Image src={require(`../assets/Icons/${item.ActivityName}.svg`)} /> */}
+
+            <Row>
+              <h4>{item.ActivityName}</h4>
+            </Row>
+            <Row>
+              <p>{item.RecAreaActivityDescription}</p>
+            </Row>
+          </div>
+        </div>
+      ));
+    }
     return (
       <Container className="detail-container">
         <NavigationBar />
         <Row className="accommodations-header">
           <Carousel className="carousel-slide">
-            <Carousel.Item>
-              <Image src="/images/Fireside.png" />
-            </Carousel.Item>
+            {this.state.images.map((item) => (
+              <Carousel.Item>
+                <Image src={item} />
+              </Carousel.Item>
+            ))}
           </Carousel>
         </Row>
         <Row>
@@ -34,7 +106,7 @@ class Accommodations extends React.Component {
             <Row className="detail-title">
               <Col>
                 <Row>
-                  <h1>Pinecrest Group Campground</h1>
+                  <h1>{this.state.title}</h1>
                 </Row>
                 <Row className="detail-review">
                   <p>
@@ -47,17 +119,8 @@ class Accommodations extends React.Component {
             <Row className="detail-title-bar"></Row>
             <Row className="detail-description">
               <h2>Description</h2>
-              <p>
-                Pinecrest Campground offers four group campsites that provide a
-                nice, quiet and relaxing atmosphere. This is a wonderful
-                location for a group to start their south Florida adventure.
-              </p>
-              <p>
-                This campground is for primitive group use camping only. Picnic
-                tables and fire rings are available at each site. There are no
-                covered picnic areas, toilets, hookups, or water. Minimal shade
-                is provided by surrounding trees.
-              </p>
+              <p>{this.state.overview}</p>
+              <p>{this.state.facilities}</p>
             </Row>
             <Row className="detail-title-bar"></Row>
             <Row className="detail-campsite">
@@ -68,114 +131,7 @@ class Accommodations extends React.Component {
                       <h3>Campsite Area</h3>
                     </Row>
                     <Row>
-                      <ul>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_guests_122299.svg')}
-                          />{' '}
-                          Group Standard Area
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_RV_3241806.svg')}
-                          />{' '}
-                          Overnight
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_Electricity_2169306.svg')}
-                          />{' '}
-                          Nonelectric
-                        </li>
-                      </ul>
-                    </Row>
-                  </div>
-                </div>
-                <div className="detail-campsite-card-outter">
-                  <div className="detail-campsite-card">
-                    <Row>
-                      <h3>Essentials</h3>
-                    </Row>
-                    <Row>
-                      <ul>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_cabin_3358008.svg')}
-                          />{' '}
-                          No covered picnic areas
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_Toilet_3130377.svg')}
-                          />{' '}
-                          No toilets
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_sewage_pipe_2203299.svg')}
-                          />{' '}
-                          No hookups
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_Water_3495628.svg')}
-                          />{' '}
-                          No water
-                        </li>
-                      </ul>
-                    </Row>
-                  </div>
-                </div>
-                <div className="detail-campsite-card-outter">
-                  <div className="detail-campsite-card">
-                    <Row>
-                      <h3>Amenities</h3>
-                    </Row>
-                    <Row>
-                      <ul>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_reed_3117167.svg')}
-                          />{' '}
-                          Tables
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_Campfire_1391536.svg')}
-                          />{' '}
-                          Fire Pit
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_Picnic_Table_744567.svg')}
-                          />{' '}
-                          Picnic Table
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_jacuzzi_3347734.svg')}
-                          />{' '}
-                          Vault Toilets
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_Accessibility_1273315.svg')}
-                          />{' '}
-                          Accessibility
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_forest_2875962.svg')}
-                          />{' '}
-                          Quiet Area
-                        </li>
-                        <li>
-                          <Image
-                            src={require('../assets/Icons/noun_Spatula_1976953.svg')}
-                          />{' '}
-                          Grills/Fire Ring
-                        </li>
-                      </ul>
+                      <ul>{amenities}</ul>
                     </Row>
                   </div>
                 </div>
@@ -190,58 +146,7 @@ class Accommodations extends React.Component {
                 <Row>
                   <h3>Offered near campground</h3>
                 </Row>
-                <div className="detail-campsite-card-outter">
-                  <div className="detail-activities-card">
-                    <Image
-                      src={require('../assets/Icons/noun_Bike_2279318.svg')}
-                    />
-
-                    <Row>
-                      <h4>Biking</h4>
-                    </Row>
-                    <Row>
-                      <p>
-                        Biking trails are available in this area. Bring your own
-                        mountain bike or rent one from our rental locations.
-                      </p>
-                    </Row>
-                  </div>
-                </div>
-                <div className="detail-campsite-card-outter">
-                  <div className="detail-activities-card">
-                    <Image
-                      src={require('../assets/Icons/noun_Hiking_3402699.svg')}
-                    />
-                    <Row>
-                      <h4>Hiking</h4>
-                    </Row>
-                    <Row>
-                      <p>
-                        There are many interesting hiking trails in the
-                        surrounding area. Sovereign Trails is a popular one to
-                        try.{' '}
-                      </p>
-                    </Row>
-                  </div>
-                </div>
-                <div className="detail-campsite-card-outter">
-                  <div className="detail-activities-card">
-                    <Image
-                      src={require('../assets/Icons/noun_Fishing_1750119.svg')}
-                    />
-
-                    <Row>
-                      <h4>Fishing</h4>
-                    </Row>
-                    <Row>
-                      <p>
-                        Fishing near the Clextonia River is a fun pastime to do
-                        during a lazy afternoon. We have rods for rent and bait
-                        for purchase.
-                      </p>
-                    </Row>
-                  </div>
-                </div>
+                {activities}
               </Col>
             </Row>
             <Row className="detail-title-bar"></Row>

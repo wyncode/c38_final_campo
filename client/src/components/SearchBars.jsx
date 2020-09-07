@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import axios from 'axios';
-import { Container, Form, FormControl } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Redirect } from 'react-router-dom';
+import { Container, Form, FormControl, Button } from 'react-bootstrap';
 import data from '../parks-simple.json';
+import Date from '../components/Date';
 
+// im going to fix your search bar cuz... this is a REQUIREMENT FOR THE APP TO WORK!
+// your welcome :)!
 const SearchBars = () => {
   const [searchValue, setSearchValue] = useState('');
+  const [submitValue, setSubmitValue] = useState(false);
   const [inputValue, setInputValue] = useState(null);
 
   function searchHandle(e) {
@@ -17,10 +21,15 @@ const SearchBars = () => {
     return inputValue;
   }
 
+  function onSearchSubmit() {
+    setSubmitValue(true);
+  }
+
   return (
     <div>
+      {submitValue ? <Redirect to={`/camp-facilities/${searchValue}`} /> : null}
       <Container className="d-flex flex-row pt-2">
-        <Form style={{ width: 440 }}>
+        <Form style={{ width: 440 }} onSubmit={onSearchSubmit}>
           <FormControl
             value={inputValue && inputValue.name}
             type="text"
@@ -44,15 +53,11 @@ const SearchBars = () => {
               ))}
             <div></div>
           </div>
+          <Date />
+          <Button type="submit" id="buttons">
+            <span>Find My Trip</span>
+          </Button>
         </Form>
-
-        {/* {inputValue &&
-          inputValue.map((item) => (
-            <div>
-              <h1>{item.name}</h1>
-              <p>{item.price}</p>
-            </div>
-          ))} */}
       </Container>
     </div>
   );
