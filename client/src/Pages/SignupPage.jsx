@@ -17,7 +17,7 @@ const SignUp = ({ history }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post('/api/users/', formData)
+      .post('/api/users/signup', formData)
       .then((response) => {
         sessionStorage.setItem('user', response.data);
         setCurrentUser(response.data);

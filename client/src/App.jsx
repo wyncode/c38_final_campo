@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { AppContextProvider } from './context/AppContext';
-import ContextDemo from './components/ContextDemo';
 import Accommodations from './components/Accommodations';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import SigninPage from './Pages/SigninPage';
@@ -20,15 +19,7 @@ import Profile from './Pages/ProfilePage';
 import './App.css';
 
 const App = () => {
-  const [serverMessage, setServerMessage] = useState('');
 
-  const fetchDemoData = () => {
-    fetch('/api/demo')
-      .then((response) => response.json())
-      .then((data) => setServerMessage(data.message));
-  };
-
-  useEffect(fetchDemoData, []);
 
   return (
     <AppContextProvider>

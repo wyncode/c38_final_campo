@@ -36,26 +36,20 @@ const createSendToken = (user, statusCode, req, res) => {
     }
   });
 };
+  
 
-exports.signup = catchAsync(async (req, res, next) => {
+exports.signup = catchAsync(async (req, res) => {
+
   const newUser = await User.create({
     name: req.body.name,
     email: req.body.email,
     password: req.body.password,
-    passwordConfirm: req.body.passwordConfirm
+    passwordConfirm: req.body.password
   });
 
 
-  // const url = `${req.protocol}://${req.get('host')}/me`;
-  // // console.log(url);
-  // await new Email(newUser, url)
-//attach above to send email pug.~~  await new Email(newUser, url).sendWelcome();
-  //.sendWelcome();
-
   const url = `${req.protocol}://${req.get('host')}/me`;
-//  console.log(url)
   await new Email(newUser, url).sendWelcome();
-
 
   createSendToken(newUser, 201, req, res);
 });

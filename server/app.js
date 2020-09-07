@@ -13,22 +13,17 @@ const bodyParser = require('body-parser');
 const compression = require('compression');
 const cors = require('cors');
 
-const AppError = require('./utils/appError');
 const globalErrorHandler = require('./controllers/errorController');
 const parkRouter = require('./routes/parkRoutes');
 const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
 const bookingRouter = require('./routes/bookingRoutes');
 const bookingController = require('./controllers/bookingController');
-const viewRouter = require('./routes/viewRoutes');
 
 // Start express app
 const app = express();
 
 app.enable('trust proxy');
-
-app.set('view engine', 'pug');
-app.set('views', path.join(__dirname, 'views'));
 
 // 1) GLOBAL MIDDLEWARES
 // Implement CORS
@@ -36,9 +31,6 @@ app.use(cors());
 
 app.options('*', cors());
 // app.options('/api/v1/tours/:id', cors());
-
-// Serving static files
-app.use(express.static(path.join(__dirname, 'public')));
 
 // Set security HTTP headers
 app.use(helmet());
@@ -67,6 +59,13 @@ app.post(
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 app.use(cookieParser());
+
+if (process.env.NODE_ENV === 'production') {
+  // Serve any static files
+  app.use(express.static(path.join(__dirname, '../client/build')));
+
+}
+
 
 // Data sanitization against NoSQL query injection
 app.use(mongoSanitize());
@@ -98,16 +97,17 @@ app.use((req, res, next) => {
 });
 
 // 3) ROUTES
-app.use('/', viewRouter);
-app.use('/api/v1/parks', parkRouter);
-app.use('/api/v1/users', userRouter);
-app.use('/api/v1/reviews', reviewRouter);
-app.use('/api/v1/bookings', bookingRouter);
-
-app.all('*', (req, res, next) => {
-  next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
-});
+app.use('/api/parks', parkRouter);
+app.use('/api/users', userRouter);
+app.use('/api/reviews', reviewRouter);
+app.use('/api/bookings', bookingRouter);
 
 app.use(globalErrorHandler);
+
+if (process.env.NODE_ENV === 'production') {
+  app.get('*', (request, response) => {
+    response.sendFile(path.join(__dirname, '../client/build', 'index.html'));
+  });
+}
 
 module.exports = app;
