@@ -45,7 +45,7 @@ Authentication | ---- | ----- |
 Sign Up  | api/users/signup |  `POST`  
 Login | api/users/login |  `POST` 
 Forgot Password | api/users/forgotPassword | `POST`
-Reset Password | api/users/resetPassword/
+Reset Password | api/users/resetPassword/ 
 Update Current Password | api/users/updateMyPassword | `PATCH`
 ------------- | --- | ------ | 
 Users | | 
@@ -73,8 +73,178 @@ Get All Bookings | api/bookings | `GET`
 - Postman Link 
 [Postman Link to Docs](https://documenter.getpostman.com/view/12492228/TVCiSm8L)
 
-## Models/Schema used:
-* User Schema 
+# Schema examples
+## User Model
+```
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: [true, 'Please tell us your name!']
+  },
+  email: {
+    type: String,
+    required: [true, 'Please provide your email'],
+    unique: true,
+    lowercase: true,
+    validate: [validator.isEmail, 'Please provide a valid email']
+  },
+  photo: {
+    type: String,
+    default: 'default.jpg'
+  },
+  role: {
+    type: String,
+    enum: ['user', 'owner', 'lead-guide', 'admin'],
+    default: 'user'
+  },
+  password: {
+    type: String,
+    required: [true, 'Please provide a password'],
+    minlength: 8,
+    select: false
+  },
+  passwordConfirm: {
+    type: String,
+    required: [true, 'Please confirm your password'],
+    validate: {
+      // This only works on CREATE and SAVE!!!
+      validator: function(el) {
+        return el === this.password;
+      },
+      message: 'Passwords are not the same!'
+    }
+  },
+  passwordChangedAt: Date,
+  passwordResetToken: String,
+  passwordResetExpires: Date,
+  active: {
+    type: Boolean,
+    default: true,
+    select: false
+  }
+});
+```
+
+## Park Model 
+ You can upload and advertise your private campground. 
+```
+const parkSchema = new mongoose.Schema(
+    {
+      name: {
+        type: String,
+        required: [true, 'A park must have a name'],
+        unique: true,
+        trim: true,
+        maxlength: [40, 'A park name must have less or equal then 40 characters'],
+        minlength: [10, 'A park name must have more or equal then 10 characters']
+        // validate: [validator.isAlpha, 'Tour name must only contain characters']
+      },
+      slug: String,
+      duration: {
+        type: Number,
+        required: [true, 'Choose Duration']
+      },
+      maxGroupSize: {
+        type: Number,
+        required: [true, 'Must have a group size']
+      },
+      difficulty: {
+        type: String,
+        required: [true, 'A  must have a difficulty'],
+        enum: {
+          values: ['easy', 'medium', 'difficult'],
+          message: 'Difficulty is either: easy, medium, difficult'
+        }
+      },
+      ratingsAverage: {
+        type: Number,
+        default: 4.5,
+        min: [1, 'Rating must be above 1.0'],
+        max: [5, 'Rating must be below 5.0'],
+        set: val => Math.round(val * 10) / 10 // 4.666666, 46.6666, 47, 4.7
+      },
+      ratingsQuantity: {
+        type: Number,
+        default: 0
+      },
+      price: {
+        type: Number,
+        required: [true, 'A campsite must have a price']
+      },
+      priceDiscount: {
+        type: Number,
+        validate: {
+          validator: function(val) {
+            // this only points to current doc on NEW document creation
+            return val < this.price;
+          },
+          message: 'Discount price ({VALUE}) should be below regular price'
+        }
+      },
+      summary: {
+        type: String,
+        trim: true,
+        required: [true, 'A Park must have a description']
+      },
+      description: {
+        type: String,
+        trim: true
+      },
+      imageCover: {
+        type: String,
+        required: [true, 'A Park must have a cover image']
+      },
+      images: [String],
+      createdAt: {
+        type: Date,
+        default: Date.now(),
+        select: false
+      },
+      startDates: [Date],
+      secretTour: {
+        type: Boolean,
+        default: false
+      },
+      startLocation: {
+        // GeoJSON
+        type: {
+          type: String,
+          default: 'Point',
+          enum: ['Point']
+        },
+        coordinates: [Number],
+        address: String,
+        description: String
+      },
+      locations: [
+        {
+          type: {
+            type: String,
+            default: 'Point',
+            enum: ['Point']
+          },
+          coordinates: [Number],
+          address: String,
+          description: String,
+          day: Number
+        }
+      ],
+      guides: [
+        {
+          type: mongoose.Schema.ObjectId,
+          ref: 'User'
+        }
+      ]
+    },
+    {
+      toJSON: { virtuals: true },
+      toObject: { virtuals: true }
+    }
+  );
+  ```
+
+
+
 
 
 
