@@ -16,11 +16,6 @@ const ExplorePage = () => {
 
   const [selectedPark, setSelectedPark] = useState(null);
 
-  console.log(data.geometry)
-  
-
-
-
   useEffect(() => {
     const listener = (e) => {
       if (e.key === 'Escape') {
@@ -33,6 +28,8 @@ const ExplorePage = () => {
       window.removeEventListener('keydown', listener);
     };
   }, []);
+
+
   return (
     <div>
       <NavigationBar />
@@ -44,13 +41,15 @@ const ExplorePage = () => {
             setViewport(viewport);
           }}
         >
-          <Marker key={1} latitude={35.611763} longitude={-83.489548}>
+
+          <Marker key={1} latitude={35.611763} longitude={-83.489548}
+          key>
             <button
               className="marker-btn"
               onClick={(e) => {
                 e.preventDefault(setSelectedPark());
               }}
-            ></button>
+            ><h1>Park</h1></button>
             
           </Marker>
           {selectedPark ? (

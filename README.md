@@ -25,6 +25,60 @@ These include:
 - `cp .env.sample .env`
 -
 
+## Back-end Usage(API Endpoints)
+
+HTTP Requests | URL | Method | 
+------------- | --- | ------ | 
+Parks | ---- |  -----
+Get All Parks | api/parks | `GET` 
+Get Park | api/parks/parkId | `GET` 
+Create Park | api/current_user | `POST` 
+Update Park | api/parks/parkId |  `PATCH`  
+Delete Park | api/parks/parkId |  `DELETE`  
+Get Top 5 parks | api/parks/top-5-cheap |  `GET` 
+Get Monthly Plan | api/parks/monthly-plan/2021 |  `GET` 
+Get Park Stats | api/parks/park-stats |  `GET` 
+Get Parks within Radius | api/parks/parks-within/center/lat,lng/unit/mi |  `GET` 
+Get Distance to park | api/parks/distances/lat,lng/unit/mi |  `POST`  
+------------- | --- | ------ | 
+Authentication | ---- | ----- |
+Sign Up  | api/users/signup |  `POST`  
+Login | api/users/login |  `POST` 
+Forgot Password | api/users/forgotPassword | `POST`
+Reset Password | api/users/resetPassword/
+Update Current Password | api/users/updateMyPassword | `PATCH`
+------------- | --- | ------ | 
+Users | | 
+Get All Users | api/users?role=user | `GET`
+Get User | api/users | `GET`
+Update User | api/users/userId | `PATCH`
+Delete User | api/users/userId | `DELETE`
+Update Current User | api/users/updateMe | `PATCH`
+Delete Current User | api//users/userId | `DELETE`
+------------- | --- | ------ | 
+Reviews | | 
+Get Review | api/reviews/reviewId | `GET`
+Get All Reviews | api/reviews | `GET`
+Update Review | api/reviews/reviewId | `PATCH` 
+Post Review | api/reviews | `POST`
+Delete Review | api/reviews | `DELETE`
+------------- | --- | ------ | 
+Create New Review on Park | api/parks/parkId/reviews | `POST`
+Get All Reviews on Park | api/parks/parkId/reviews | `GET`
+------------- | --- | ------ | 
+Bookings | ---- | ----- |
+Get Booking | api/bookings/bookingId | `GET`
+Get All Bookings | api/bookings | `GET`
+
+- Postman Link 
+[Postman Link to Docs](https://documenter.getpostman.com/view/12492228/TVCiSm8L)
+
+## Models/Schema used:
+* User Schema 
+
+
+
+
 ## Available build commands
 
 - `yarn dev`: Runs BOTH your Express.JS and React developer environment locally at the same time. Any logs coming from Express will be prefaced with `[0]`, any logs from `create-react-app` will be prefaced with `[1]`.
