@@ -23,17 +23,17 @@ const bookingController = require('./controllers/bookingController');
 // Start express app
 const app = express();
 
-app.enable('trust proxy');
+// app.enable('trust proxy');
 
-// 1) GLOBAL MIDDLEWARES
-// Implement CORS
-app.use(cors());
+// // 1) GLOBAL MIDDLEWARES
+// // Implement CORS
+// app.use(cors());
 
-app.options('*', cors());
-// app.options('/api/v1/tours/:id', cors());
+// app.options('*', cors());
+// // app.options('/api/v1/tours/:id', cors());
 
-// Set security HTTP headers
-app.use(helmet());
+// // Set security HTTP headers
+// app.use(helmet());
 
 // Development logging
 if (process.env.NODE_ENV === 'development') {
@@ -56,16 +56,14 @@ app.post(
 );
 
 // Body parser, reading data from body into req.body
-app.use(express.json({ limit: '10kb' }));
-app.use(express.urlencoded({ extended: true, limit: '10kb' }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, '../client/build')));
-
 }
-
 
 // Data sanitization against NoSQL query injection
 app.use(mongoSanitize());
@@ -74,18 +72,18 @@ app.use(mongoSanitize());
 app.use(xss());
 
 // Prevent parameter pollution
-app.use(
-  hpp({
-    whitelist: [
-      'duration',
-      'ratingsQuantity',
-      'ratingsAverage',
-      'maxGroupSize',
-      'difficulty',
-      'price'
-    ]
-  })
-);
+// app.use(
+//   hpp({
+//     whitelist: [
+//       'duration',
+//       'ratingsQuantity',
+//       'ratingsAverage',
+//       'maxGroupSize',
+//       'difficulty',
+//       'price'
+//     ]
+//   })
+// );
 
 app.use(compression());
 
